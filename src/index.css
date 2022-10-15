@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.logo {
+  display: block;
+  max-width: 10ch;
+  border-right: 2px solid;
+  animation: typing 5s steps(10), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 8ch;
+  }
+  50% {
+    width: 6ch;
+  }
+  80% {
+    width: 10ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
