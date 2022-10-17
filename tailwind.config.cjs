@@ -21,8 +21,9 @@ module.exports = {
       },
       fontSize: {
         "title-card": ["24px", { lineHeight: "32px" }],
-        "subtitle-card": ["16px", { lineHeight: "26px" }],
+        "subtitle-card": ["16px", { lineHeight: "20px" }],
         "litle-title-card": ["14px", { lineHeight: "20px" }],
+        "content-card": ["14px", { lineHeight: "18px" }],
       },
     },
   },

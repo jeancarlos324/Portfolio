@@ -1,0 +1,90 @@
+.body-container {
+  position: relative;
+  color: #fff;
+}
+
+.body-container .card {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.body-container .card:before {
+  color: rgb(167, 167, 167);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background: #181818cc;
+  clip-path: circle(1px at 100% 0%);
+  transition: 0.5s ease-in-out;
+}
+
+.body-container .card:hover:before {
+  clip-path: circle(500px at 80% -20%);
+}
+
+.body-container .card:after {
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+}
+
+.body-container .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.body-container .card:hover{
+  top: 0%;
+  transform: translateY(0%);
+}
+
+.body-container .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+}
+
+.body-container .card:hover .contentBx {
+  height: 210px;
+}
+
+.body-container .card .contentBx .size,
+.body-container .card .contentBx .color {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #fff;
+}
+
+.body-container .card:hover .contentBx .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.body-container .card:hover .contentBx .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}

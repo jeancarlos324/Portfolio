@@ -33,8 +33,13 @@ type dataProp = { [key: string]: any };
 interface CaroulselImagesProps extends HTMLMotionProps<"div"> {
   images: dataProp[];
   className?: string;
+  hImage?: string;
 }
-const CaroulselImages = ({ images, className }: CaroulselImagesProps) => {
+const CaroulselImages = ({
+  images,
+  className,
+  hImage,
+}: CaroulselImagesProps) => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [newImages, setNewImages] = useState<string[]>([]);
   const imageIndex = wrap(0, images.length, page);
@@ -52,7 +57,7 @@ const CaroulselImages = ({ images, className }: CaroulselImagesProps) => {
   return (
     <div className={`${className} relative overflow-hidden bg-primary-color`}>
       <AnimatePresence initial={false} custom={direction}>
-        <motion.div className="h-[400px] w-full ">
+        <motion.div className={`${hImage} w-full`}>
           <motion.img
             className="h-full w-full cursor-grab"
             key={page}

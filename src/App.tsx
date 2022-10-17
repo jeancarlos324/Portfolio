@@ -5,11 +5,10 @@ import ShowProjects from "./components/ShowProjects";
 import { motion, useScroll } from "framer-motion";
 function App() {
   const [darkToggle, setDarkToggle] = useState(false);
-  const { scrollYProgress } = useScroll();
   return (
     <motion.div
-      style={{ scaleX: scrollYProgress }}
-      className={` h-screen w-screen
+     
+      className={` h-screen w-full
     ${darkToggle && "dark"} `}
     >
       <ShowProjects />
