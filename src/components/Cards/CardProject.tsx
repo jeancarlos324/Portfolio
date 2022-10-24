@@ -19,10 +19,11 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
         <CaroulselImages
           images={data.images}
           className="rounded-t-popup"
-          hImage="h-[230px] md:h-[280px] "
+          hImage="h-[40vh] "
         />
+
         <motion.div className="w-full h-1/2 px-6 py-3 flex flex-col gap-2">
-          <div className="h-full">
+          <div className="h-full flex flex-col gap-3">
             <div className="flex flex-col">
               <div className="flex justify-between">
                 <h2 className="text-title-card font-bold">{data.title}</h2>
@@ -57,7 +58,7 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
-                          className="text-justify italic text-content-card"
+                          className="max-h-[80px] px-2 text-justify italic text-content-card  overflow-y-auto"
                         >
                           {data.description}
                         </motion.div>
@@ -98,7 +99,9 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
               </motion.div>
             </div>
             <motion.div className="flex gap-2 items-center">
-              <h3 className="font-semibold text-litle-title-card italic">Tiempo estimado de desarrollo:</h3>
+              <h3 className="font-semibold text-litle-title-card italic">
+                Tiempo estimado de desarrollo:
+              </h3>
               <span className="text-litle-title-card italic">
                 {data.duration}
               </span>

@@ -14,17 +14,19 @@ const ShowProjects = () => {
     setProyect(item);
   };
   return (
-    <div className="w-full">
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
-        {items.map((item) => (
-          <CardLitleProject
-            data={item}
-            key={item.id}
-            layoutId={item.id.toString()}
-            onClick={() => toggleSelect(item)}
-            className=" w-2/3 p-3"
-          />
-        ))}
+    <div className="flex flex-col h-[90%] w-full items-center ">
+      <div className="grow w-full lg:w-5/6  py-5 lg:px-20 ">
+        <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {items.map((item) => (
+            <CardLitleProject
+              data={item}
+              key={item.id}
+              layoutId={item.id.toString()}
+              onClick={() => toggleSelect(item)}
+              className="h-full w-full"
+            />
+          ))}
+        </div>
       </div>
       {selectedId && (
         <motion.div
@@ -41,7 +43,7 @@ const ShowProjects = () => {
               key={proyect.id}
               layoutId={proyect.id.toString()}
               onClick={() => setSelectedId(null)}
-              className="max-h-[90%] bg-white w-5/6 md:w-4/6 lg:w-2/5 rounded-popup  overflow-hidden"
+              className="bg-white dark:bg-primary-color dark:text-white w-5/6 md:w-4/6 lg:w-2/5 rounded-popup  overflow-hidden"
             />
           </AnimatePresence>
         </motion.div>
