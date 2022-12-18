@@ -4,6 +4,7 @@ import type { HTMLMotionProps } from "framer-motion";
 import CaroulselImages from "../Sliders/CaroulselImages";
 
 type dataProp = { [key: string]: any };
+
 interface CardProjectProps extends HTMLMotionProps<"div"> {
   data: dataProp;
   onClick?: () => void;

@@ -25,6 +25,14 @@ module.exports = {
         "litle-title-card": ["14px", { lineHeight: "20px" }],
         "content-card": ["14px", { lineHeight: "24px" }],
       },
+      fontFamily: {
+        sans: [
+          "Inter var, sans-serif",
+          { fontFeatureSettings: '"cv11", "ss01"' },
+        ],
+        victor: "Victor Mono",
+        manrope: "Manrope, sans-serif",
+      },
     },
   },
   plugins: [],
