@@ -1,13 +1,49 @@
+import { motion } from "framer-motion";
 import React from "react";
-
 interface FooterProps {
   className?: string;
 }
 const Footer = ({ className }: FooterProps) => {
-  return <div className={`${className} w-full h-1/3 bg-red-500`}>
-    <div className="dark:bg-secondary-color-gradiant" >a</div>
-    <div>b</div>
-  </div>;
+  const socialNetwork = [
+    {
+      id: 1,
+      name: "fa-brands fa-github",
+      url: "https://github.com/jeancarlos324",
+    },
+    {
+      id: 2,
+      name: "fa-brands fa-linkedin",
+      url: "https://www.linkedin.com/in/jean-carlos-ticona-gutierrez-69a824204/",
+    },
+    {
+      id: 3,
+      name: "fa-brands fa-discord",
+      url: "https://discordapp.com/users/jeancarlos#3423",
+    },
+    { id: 4, name: "fa-brands fa-google", url: "mailto:jecar324@gmail.com" },
+  ];
+  return (
+    <div className={`${className} w-full flex flex-col dark:bg-primary-color`}>
+      <div className="pt-5 pb-5 md:pt-5 md:pb-0">
+        <ul className="flex justify-center md:justify-end md:p-5 md:gap-5 gap-10">
+          {socialNetwork.map((social) => (
+            <motion.li key={social.id} whileHover={{ scale: 1.2 }}>
+              <a
+                href={`${social.url}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className={`${social.name} text-3xl md:text-2xl`}></i>
+              </a>
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+      <div className="dark:bg-secondary-color-gradiant font-victor p-1 px-3 flex justify-center md:justify-end text-xs">
+        Jean Ticona 2022. All Rights Reserved
+      </div>
+    </div>
+  );
 };
 
 export default Footer;

@@ -25,7 +25,8 @@ module.exports = {
         "subtitle-card": ["16px", { lineHeight: "20px" }],
         "litle-title-card": ["14px", { lineHeight: "20px" }],
         "content-card": ["14px", { lineHeight: "24px" }],
-        menu: ["18px", { lineHeight: "16px" }],
+        menu: ["1em", { lineHeight: "16px" }],
+        title: ["3.5em", { lineHeight: "24px" }],
       },
       fontFamily: {
         sans: [
@@ -34,6 +35,7 @@ module.exports = {
         ],
         victor: "Victor Mono",
         manrope: "Manrope, sans-serif",
+        chivo: "Chivo Mono, monospace",
       },
     },
   },

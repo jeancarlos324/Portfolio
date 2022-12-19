@@ -36,7 +36,7 @@ const Header = ({ className }: HeaderProps) => {
           </motion.a>
         </motion.div>
         <div className="hidden md:flex items-center gap-10 h-full">
-          <motion.div className="flex h-full w-full justify-center gap-10 font-victor ">
+          <motion.div className="flex h-full w-full justify-center gap-5 font-victor ">
             {menu.map((option) => (
               <Option
                 className=" relative "
