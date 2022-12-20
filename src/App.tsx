@@ -14,12 +14,12 @@ const App = () => {
       ${darkToggle && "dark"} font-manrope `}
     >
       <div className=" w-full h-full  bg-white dark:bg-secondary-color dark:text-white overflow-y-auto">
-        {/* <button
+        <button
           className="bg-white text-primary-color dark:bg-primary-color dark:text-white w-1/4 border-2 m-0 border-black dark:border-white"
           onClick={() => setDarkToggle(!darkToggle)}
         >
           {darkToggle ? "ligth" : "dark"}
-        </button> */}
+        </button>
         <Header className="dark:bg-primary-color bg-gray-light-gradiant z-10 dark:text-gray-light-gradiant" />
         <AboutMe className="h-full container mx-auto" />
         {/* <div id="skills" className="h-full">

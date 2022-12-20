@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import HtmlTool from "../Toolkits/HtmlTool";
+import home from "../../assets/home.svg";
 interface AboutMeProp {
   className?: string;
 }
@@ -28,21 +29,15 @@ const AboutMe = ({ className }: AboutMeProp) => {
             whileHover={{ scale: 1.1 }}
             className="border-2 border-red-gradiant p-3 rounded-xl font-manrope font-bold text-menu"
           >
-            DESCARGAR CV
+            Descargar CV
           </motion.button>
           <motion.button className="bg-red-gradiant p-3 px-6 rounded-xl font-manrope font-bold text-menu">
-            CONTACTAR
+            Contactar
           </motion.button>
         </div>
       </div>
       <motion.div className="w-full md:w-1/2 flex justify-center items-center">
-        <img
-          className="md:w-3/5 md:h-3/5 p-5 animate-pulse"
-          src={
-            "https://static.vecteezy.com/system/resources/previews/008/844/959/original/cute-long-eared-brown-dog-sleeping-on-the-floor-it-s-a-vector-image-on-a-white-background-png.png"
-          }
-          alt=""
-        />
+        <img className="md:w-full md:h-full p-5" src={home} alt="home" />
       </motion.div>
     </section>
   );
