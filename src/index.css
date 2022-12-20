@@ -35,6 +35,16 @@
 * {
   font-family: "Victor Mono";
 }
+
+*::selection {
+  background: rgb(249, 40, 71);
+}
+
+/* Firefox */
+*::-moz-selection {
+  background: rgb(249, 40, 71);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
