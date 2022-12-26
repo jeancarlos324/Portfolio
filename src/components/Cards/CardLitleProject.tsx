@@ -14,10 +14,12 @@ const CardLitleProject = ({
   className,
   ...otherProps
 }: CardProjectProps) => {
-  console.log(data);
   return (
-    <div className=" flex justify-center items-center bg-slate-200">
-      <motion.div className={`${className} body-container bg-red-400`} {...otherProps}>
+    <div className=" flex justify-center items-center backdrop-blur-md bg-[#ffffff11] rounded-2xl">
+      <motion.div
+        className={`${className} body-container`}
+        {...otherProps}
+      >
         <motion.div className="h-full card relative">
           <img src={data.images[0].image} className="h-full" />
           <div className="contentBx flex flex-col items-center gap-4">
@@ -27,18 +29,14 @@ const CardLitleProject = ({
             </div>
             <div className="size justify-around w-full">
               {data.technologies.map((technologic: any) => (
-                <div key={technologic.id} className="min-h-[35px] min-w-[35px] max-h-[45px] max-w-[45px]  ">
+                <div
+                  key={technologic.id}
+                  className="min-h-[35px] min-w-[35px] max-h-[45px] max-w-[45px]  "
+                >
                   <img src={technologic.image} className="h-full w-full " />
                 </div>
               ))}
             </div>
-            {/* <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.8 }}
-              className=" bg-white rounded-popup p-1 text-primary-color"
-            >
-              Ver mas
-            </motion.button> */}
           </div>
         </motion.div>
       </motion.div>

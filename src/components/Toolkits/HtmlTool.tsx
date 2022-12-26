@@ -6,7 +6,7 @@ interface Tool {
 const HtmlTool = ({ tagHtml }: Tool) => {
   return (
     <span
-      className=" hidden md:inline dark:text-gray-300 opacity-20 italic text-md px-2"
+      className=" hidden md:inline dark:text-[#ffffff1a] text-[#00000011] italic text-subtitle-card px-2"
       contentEditable={false}
     >
       {tagHtml}

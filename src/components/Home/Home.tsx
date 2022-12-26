@@ -1,15 +1,19 @@
 import { motion } from "framer-motion";
 import HtmlTool from "../Toolkits/HtmlTool";
 import home from "../../assets/home.svg";
-interface AboutMeProp {
+import "./home.css";
+interface HomeProp {
   className?: string;
 }
 
-const AboutMe = ({ className }: AboutMeProp) => {
+const Home = ({ className }: HomeProp) => {
   return (
-    <section className={`${className} flex flex-col-reverse md:flex-row`}>
+    <section
+      id="home"
+      className={`${className} flex flex-col-reverse md:flex-row`}
+    >
       <div className="w-full md:w-1/2 flex  flex-col gap-5 md:my-auto p-5 md:px-10">
-        <h1 className="text-title py-5 flex flex-col gap-5 font-manrope font-bold text-center md:text-left">
+        <h1 className="text-title py-5 md:pl-10 flex flex-col gap-5 font-manrope font-bold text-center md:text-left">
           <span className="text-3xl font-chivo">¡Hola! Soy</span> Jean Ticona
         </h1>
         <h2 className="text-title-card font-chivo text-center md:text-left font-bold">
@@ -17,13 +21,16 @@ const AboutMe = ({ className }: AboutMeProp) => {
           Full-Stack Web Developer
           <HtmlTool tagHtml="</h2>" />
         </h2>
-        <p className="text-justify">
+        <div className="text-justify ">
           <HtmlTool tagHtml="<p>" />
-          Entusiasta de la programación, autodidacta y en constante crecimiento.
-          Me gustan los retos y como sobrellevarlos con los recursos que la
-          tecnología ofrece, adaptandome y retroalimentando mis habilidades.
+          <p className="md:pl-10">
+            Entusiasta de la programación, autodidacta y en constante
+            crecimiento. Me gustan los retos y como sobrellevarlos con los
+            recursos que la tecnología ofrece, adaptandome y retroalimentando
+            mis habilidades.
+          </p>
           <HtmlTool tagHtml="</p>" />
-        </p>
+        </div>
         <div className="w-full flex justify-around ">
           <motion.button
             whileHover={{ scale: 1.1 }}
@@ -36,11 +43,11 @@ const AboutMe = ({ className }: AboutMeProp) => {
           </motion.button>
         </div>
       </div>
-      <motion.div className="w-full md:w-1/2 flex justify-center items-center">
+      <motion.div className="w-full md:w-1/2 flex justify-center items-center animation-card">
         <img className="md:w-full md:h-full p-5" src={home} alt="home" />
       </motion.div>
     </section>
   );
 };
 
-export default AboutMe;
+export default Home;

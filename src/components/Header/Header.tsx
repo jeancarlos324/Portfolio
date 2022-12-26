@@ -8,10 +8,10 @@ interface HeaderProps {
 }
 
 const menu = [
-  { id: 1, name: "Home", ref: "#" },
+  { id: 1, name: "Home", ref: "#home" },
   { id: 2, name: "Sobre Mí", ref: "#aboutme" },
   { id: 3, name: "Habilidades", ref: "#skills" },
-  { id: 4, name: "Proyectos", ref: "#proyects" },
+  { id: 4, name: "Proyectos", ref: "#projects" },
 ];
 const Header = ({ className }: HeaderProps) => {
   const [isActive, setIsActive] = useState(false);
