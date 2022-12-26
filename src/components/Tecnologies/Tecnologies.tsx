@@ -61,6 +61,10 @@ const Tecnologies = ({ className }: TecnologiesProps) => {
         Tecnologías
         <HtmlTool tagHtml="</h2>" />
       </h2>
+      <div className="bg-emerald-500 flex justify-center gap-10 w-full">
+        <button>Front-End</button>
+        <button>Back-End</button>
+      </div>
       <div className="md:w-4/5 container h-[200px]">
         <CarouselMultiple
           data={images}
