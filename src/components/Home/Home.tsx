@@ -12,7 +12,16 @@ const Home = ({ className }: HomeProp) => {
       id="home"
       className={`${className} flex flex-col-reverse md:flex-row`}
     >
-      <div className="w-full md:w-1/2 flex  flex-col gap-5 md:my-auto p-5 md:px-10">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          delay: 0.3,
+          x: { duration: 1 },
+          default: { ease: "linear" },
+        }}
+        className="w-full md:w-1/2 flex  flex-col gap-5 md:my-auto p-5 md:px-10"
+      >
         <h1 className="text-title py-5 md:pl-10 flex flex-col gap-5 font-manrope font-bold text-center md:text-left">
           <span className="text-3xl font-chivo">¡Hola! Soy</span> Jean Ticona
         </h1>
@@ -42,9 +51,20 @@ const Home = ({ className }: HomeProp) => {
             Contactar
           </motion.button>
         </div>
-      </div>
+      </motion.div>
       <motion.div className="w-full md:w-1/2 flex justify-center items-center animation-card">
-        <img className="md:w-full md:h-full p-5" src={home} alt="home" />
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            delay: 0.3,
+            x: { duration: 1 },
+            default: { ease: "linear" },
+          }}
+          className="md:w-full md:h-full p-5"
+          src={home}
+          alt="home"
+        />
       </motion.div>
     </section>
   );

@@ -36,7 +36,7 @@ const CarouselMultiple = ({
       additionalTransfrom={0}
       arrows
       autoPlay
-      autoPlaySpeed={3000}
+      autoPlaySpeed={2500}
       centerMode={false}
       className=""
       containerClass="container-with-dots"
@@ -63,7 +63,7 @@ const CarouselMultiple = ({
     >
       {data.map((image) => (
         <motion.div key={image[itemKey]} className="h-full flex flex-col justify-center items-center">
-          <img src={image[labelField]} className="h-2/5 w-2/5 p-3" />
+          <img src={image[labelField]} className="h-2/5 w-2/5 p-3 animation-litle-card" />
           <span className="text-sm">{image?.title}</span>
         </motion.div>
       ))}

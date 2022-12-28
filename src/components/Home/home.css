@@ -2,6 +2,10 @@
   animation: 2.8s Infinite linear bounce;
   animation-delay: 0s;
 }
+.animation-litle-card {
+  animation: 2.8s Infinite linear bouncelitle;
+  animation-delay: 0s;
+}
 
 @keyframes bounce {
   0% {
@@ -15,6 +19,22 @@
   100% {
     opacity: 1;
     transform: translateY(8px);
+    animation-timing-function: cubic-bezier(0.8, 0, 0, 0);
+  }
+}
+
+@keyframes bouncelitle {
+  0% {
+    opacity: 1;
+    transform: translateY(4px);
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(4px);
     animation-timing-function: cubic-bezier(0.8, 0, 0, 0);
   }
 }

@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Tecnologies from "./components/Tecnologies/Tecnologies";
+import Contact from "./components/Contacts/Contact";
 const App = () => {
   const [darkToggle, setDarkToggle] = useState(true);
   return (
@@ -43,9 +44,10 @@ const App = () => {
         <div className="w-full dark:bg-secondary-color-gradiant">
           <About className="h-full container mx-auto" />
         </div>
-        <Tecnologies className="h-1/2 container mx-auto" />
-        <ShowProjects className="h-[120%] container mx-auto dark:bg-secondary-color-gradiant" />
-        <Footer className="h-1/3 md:h-[180px] " />
+        <Tecnologies className="h-2/3 container mx-auto" />
+        {/* <ShowProjects className="h-[120%] container mx-auto dark:bg-secondary-color-gradiant" /> */}
+        <Contact className="h-full container mx-auto"/>
+        <Footer className="h-1/3 md:h-[110px] " />
       </div>
       {/* <Skills /> */}
     </motion.div>
