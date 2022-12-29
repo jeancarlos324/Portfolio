@@ -42,7 +42,7 @@ const Contact = ({ className }: ContactProps) => {
 
   return (
     <div className={`${className} flex flex-col md:flex-row`}>
-      <div className="md:w-1/2 flex flex-col gap-3 items-center p-5 my-auto">
+      <div className="md:w-1/2 flex flex-col gap-3 items-center md:p-5 my-auto">
         <h2 className="text-title py-5 md:w-3/5 flex flex-col gap-5 animation-litle-card font-manrope font-bold text-center md:text-left">
           <HtmlTool tagHtml="<h2>" />
           <span className="text-3xl font-chivo text-left">Ponte en</span>
@@ -69,7 +69,7 @@ const Contact = ({ className }: ContactProps) => {
           </p>
         </div>
       </div>
-      <div className="md:w-1/2 md:h-full p-5 my-auto items-center">
+      <div className="md:w-1/2 md:h-full px-5 my-auto items-center">
         <div className="h-full">
           <form
             ref={form}
@@ -93,14 +93,12 @@ const Contact = ({ className }: ContactProps) => {
             <textarea
               required
               name="message"
-              className="border border-red-gradiant h-[50px] w-full bg-transparent
+              className="border border-red-gradiant  w-full bg-transparent
                p-3 rounded-md caret-red-500"
               cols={20}
-              rows={8}
+              rows={6}
               placeholder="Mensaje"
             ></textarea>
-            {/* <InputText label="Nombre Completo:" type="text" name="firstName" />
-            <InputText label="Nombre Completo:" type="text" name="firstName" /> */}
             <motion.button
               type="submit"
               whileTap={{ scale: 0.95 }}

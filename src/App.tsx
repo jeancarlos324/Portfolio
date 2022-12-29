@@ -46,7 +46,7 @@ const App = () => {
         </div>
         <Tecnologies className="h-2/3 container mx-auto" />
         {/* <ShowProjects className="h-[120%] container mx-auto dark:bg-secondary-color-gradiant" /> */}
-        <Contact className="h-3/5 md:h-full container mx-auto"/>
+        <Contact className="h-[85%] md:h-full container mx-auto"/>
         <Footer className="h-1/3 md:h-[110px] " />
       </div>
       {/* <Skills /> */}
