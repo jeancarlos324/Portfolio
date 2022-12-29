@@ -16,7 +16,7 @@ const About = ({ className }: AboutProps) => {
         <img className="md:w-full md:h-full p-5" src={aboutme} alt="home" />
       </motion.div>
       <div className="w-full md:w-1/2 flex  flex-col gap-5 md:my-auto md:px-10">
-        <h2 className="text-title-card font-chivo text-center md:text-left font-bold">
+        <h2 className="text-title-card font-chivo text-center md:text-left font-bold pt-10">
           <HtmlTool tagHtml="<h2>" />
           ¿Quién soy?
           <HtmlTool tagHtml="</h2>" />

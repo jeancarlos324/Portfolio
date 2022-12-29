@@ -47,11 +47,12 @@ const Header = ({ className }: HeaderProps) => {
             ))}
           </motion.div>
           <motion.button
+            type="button"
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.1 }}
             className="bg-red-gradiant h-2/3 px-5 rounded-md font-manrope font-bold"
           >
-            Contactame
+            <a href="#contact">Contactame</a>
           </motion.button>
         </div>
         <motion.button

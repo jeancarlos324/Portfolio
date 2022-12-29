@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import InputText from "./InputText";
 import emailjs, { send } from "@emailjs/browser";
 import HtmlTool from "../Toolkits/HtmlTool";
+import { dropIn } from "../../animations/animation";
 
 interface ContactProps {
   className?: string;
@@ -15,10 +16,11 @@ const Contact = ({ className }: ContactProps) => {
   };
 
   const form = useRef<HTMLFormElement>(null);
-
+  const [isScreenLoading, setIsScreenLoading] = useState(false);
   const sendEmail = (event: any) => {
     event.preventDefault();
     if (form.current) {
+      setIsScreenLoading(true);
       emailjs
         .sendForm(
           "service_t4umeyg",
@@ -26,22 +28,16 @@ const Contact = ({ className }: ContactProps) => {
           form.current,
           "7nMmZUBEdjJmMUkEi"
         )
-        .then(
-          (result) => {
-            console.log(result);
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error);
-            console.log(error.text);
-          }
-        );
+        .then((result) => {})
+        .catch((error) => console.log(error))
+        .finally(() => setIsScreenLoading(false));
+
       event.target.reset();
     }
   };
 
   return (
-    <div className={`${className} flex flex-col md:flex-row`}>
+    <div className={`${className} flex flex-col md:flex-row`} id="contact">
       <div className="md:w-1/2 flex flex-col gap-3 items-center md:p-5 my-auto">
         <h2 className="text-title py-5 md:w-3/5 flex flex-col gap-5 animation-litle-card font-manrope font-bold text-center md:text-left">
           <HtmlTool tagHtml="<h2>" />
@@ -50,20 +46,21 @@ const Contact = ({ className }: ContactProps) => {
           <span className="text-3xl font-chivo text-right">conmigo</span>
           <HtmlTool tagHtml="<h2>" />
         </h2>
+
         <div className=" hidden w-3/5 md:flex flex-col gap-2">
-          <h3 className="text-title-card font-chivo text-center md:text-left">
-            Email
-          </h3>
-          <p className="text-contact pb-5">
+          <h3 className="text-xl font-chivo text-center md:text-left">Email</h3>
+          <p className="text-md pb-5">
             <a href="mailto:jecar324@gmail.com?subject=Contact Portfolio">
               jecar324@gmail.com
             </a>
           </p>
-          <h3 className="text-title-card font-chivo text-center md:text-left ">
-            CV
-          </h3>
-          <p className="text-contact">
-            <a href="#" className="text-red-gradiant">
+          <h3 className="text-xl font-chivo text-center md:text-left ">CV</h3>
+          <p className="text-md">
+            <a
+              href="https://drive.google.com/file/d/1d5ABgCc-kWdLDQySW8_ftu49mqjp2t8E/view?usp=sharing"
+              target={"_blank"}
+              className="text-red-gradiant"
+            >
               Descargar mi CV
             </a>
           </p>
@@ -110,6 +107,21 @@ const Contact = ({ className }: ContactProps) => {
           </form>
         </div>
       </div>
+      {isScreenLoading && (
+        <div
+          className={`absolute bg-[#00000088] z-30 left-0 bottom-0 w-screen h-screen flex justify-center items-center`}
+        >
+          <motion.div
+            className="bg-green-400 p-3 rounded-md font-manrope"
+            variants={dropIn}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            Mensaje Enviado
+          </motion.div>
+        </div>
+      )}
     </div>
   );
 };

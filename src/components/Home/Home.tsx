@@ -42,13 +42,22 @@ const Home = ({ className }: HomeProp) => {
         </div>
         <div className="w-full flex justify-around ">
           <motion.button
+            type="button"
             whileHover={{ scale: 1.1 }}
             className="border-2 border-red-gradiant p-3 rounded-xl font-manrope font-bold text-menu"
           >
-            Descargar CV
+            <a
+              href="https://drive.google.com/file/d/1d5ABgCc-kWdLDQySW8_ftu49mqjp2t8E/view?usp=sharing"
+              target={"_blank"}
+            >
+              Descargar CV
+            </a>
           </motion.button>
-          <motion.button className="bg-red-gradiant p-3 px-6 rounded-xl font-manrope font-bold text-menu">
-            Contactar
+          <motion.button
+            type="button"
+            className="bg-red-gradiant p-3 px-6 rounded-xl font-manrope font-bold text-menu"
+          >
+            <a href="#contact">Contactar</a>
           </motion.button>
         </div>
       </motion.div>

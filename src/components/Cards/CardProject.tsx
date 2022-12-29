@@ -20,13 +20,13 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
         <CaroulselImages
           images={data.images}
           className="rounded-t-popup"
-          hImage="h-[40vh] "
+          hImage="h-[25vh] md:h-[40vh] "
         />
 
         <motion.div className="w-full h-1/2 px-6 py-3 flex flex-col gap-2">
           <div className="h-full flex flex-col gap-3">
             <div className="flex flex-col">
-              <div className="flex justify-between">
+              <div className="flex flex-col md:flex-row md:justify-between">
                 <h2 className="text-title-card font-bold">{data.title}</h2>
                 <motion.a
                   href={data.urlSite}
@@ -99,7 +99,7 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
                 ))}
               </motion.div>
             </div>
-            <motion.div className="flex gap-2 items-center">
+            <motion.div className="hidden md:flex gap-2 items-center">
               <h3 className="font-semibold text-litle-title-card italic">
                 Tiempo estimado de desarrollo:
               </h3>

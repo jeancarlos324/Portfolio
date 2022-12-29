@@ -31,25 +31,27 @@ const App = () => {
       ${darkToggle && "dark"} font-manrope `}
     >
       <div className=" w-full h-full  bg-white dark:bg-secondary-color dark:text-white overflow-y-auto scroll-smooth">
-        <button
+        {/* <button
           className="absolute z-30 bg-white text-primary-color dark:bg-primary-color dark:text-white w-1/4 border-2 m-0 border-black dark:border-white"
           onClick={() => setDarkToggle(!darkToggle)}
         >
           {darkToggle ? "ligth" : "dark"}
-        </button>
+        </button> */}
         <Header className="dark:bg-primary-color bg-gray-light-gradiant z-10 dark:text-gray-light-gradiant" />
-        <div className="w-full">
+        <div className=" h-full w-full">
           <Home className="h-full container mx-auto" />
         </div>
-        <div className="w-full dark:bg-secondary-color-gradiant">
+        <div className="h-[110%] md:h-full w-full dark:bg-secondary-color-gradiant">
           <About className="h-full container mx-auto" />
         </div>
-        <Tecnologies className="h-2/3 container mx-auto" />
-        {/* <ShowProjects className="h-[120%] container mx-auto dark:bg-secondary-color-gradiant" /> */}
-        <Contact className="h-[85%] md:h-full container mx-auto"/>
-        <Footer className="h-1/3 md:h-[110px] " />
+        <Tecnologies className="h-full md:h-2/3 container mx-auto" />
+        <div className="h-[110%] md:h-full w-full dark:bg-secondary-color-gradiant">
+          <Skills className="h-full md:h-2/3 container mx-auto"  />
+        </div>
+        <ShowProjects className="md:h-[120%] container mx-auto dark:bg-secondary-color-gradiant" />
+        <Contact className="h-[85%] md:h-full container mx-auto" />
+        <Footer className=" md:h-[110px] " />
       </div>
-      {/* <Skills /> */}
     </motion.div>
   );
 };

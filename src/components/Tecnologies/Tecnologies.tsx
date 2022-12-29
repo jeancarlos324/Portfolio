@@ -11,7 +11,7 @@ const Tecnologies = ({ className }: TecnologiesProps) => {
   const [options, setOptions] = useState("Front");
 
   return (
-    <div
+    <section
       className={`${className} flex flex-col items-center justify-center gap-5  px-5 py-10`}
     >
       <h2 className="text-subtitle font-chivo text-center font-bold">
@@ -77,7 +77,7 @@ const Tecnologies = ({ className }: TecnologiesProps) => {
           </motion.div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
