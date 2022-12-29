@@ -27,6 +27,7 @@ module.exports = {
         "content-card": ["14px", { lineHeight: "24px" }],
         menu: ["1em", { lineHeight: "16px" }],
         subtitle: ["2em", { lineHeight: "16px" }],
+        contact: ["1.2em", { lineHeight: "16px" }],
         title: ["3.5em", { lineHeight: "24px" }],
       },
       fontFamily: {

@@ -25,7 +25,7 @@ const InputText = ({
       )}
       <input
         {...otherProps}
-        className="border rounded-input border-placeholder-color h-[30px] bg-transparent"
+        className="border border-red-gradiant h-[50px] bg-transparent p-3 rounded-md"
       />
     </div>
   );
