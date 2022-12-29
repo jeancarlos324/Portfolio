@@ -61,7 +61,7 @@ const Home = ({ className }: HomeProp) => {
           </motion.button>
         </div>
       </motion.div>
-      <motion.div className="w-full md:w-1/2 flex justify-center items-center animation-card">
+      <motion.div className="w-full  md:w-1/2 flex justify-center items-center animation-card">
         <motion.img
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -70,7 +70,7 @@ const Home = ({ className }: HomeProp) => {
             x: { duration: 1 },
             default: { ease: "linear" },
           }}
-          className="md:w-full md:h-full p-5"
+          className="sm:w-4/5 sm:h-4/5  md:w-full md:h-full p-5"
           src={home}
           alt="home"
         />

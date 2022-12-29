@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import HtmlTool from "../Toolkits/HtmlTool";
 import aboutme from "../../assets/aboutme.svg";
+import Template from "../Templates/Template";
 interface AboutProps {
   className: string;
 }
@@ -13,7 +14,11 @@ const About = ({ className }: AboutProps) => {
       className={`${className} flex flex-col-reverse md:flex-row pt-10`}
     >
       <motion.div className="w-full md:w-1/2 flex justify-center items-center animation-card">
-        <img className="md:w-full md:h-full p-5" src={aboutme} alt="home" />
+        <img
+          className="md:w-full md:h-full p-5 sm:h-4/5 sm:w-4/5"
+          src={aboutme}
+          alt="home"
+        />
       </motion.div>
       <div className="w-full md:w-1/2 flex  flex-col gap-5 md:my-auto md:px-10">
         <h2 className="text-title-card font-chivo text-center md:text-left font-bold pt-10">

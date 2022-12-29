@@ -72,12 +72,12 @@ const Contact = ({ className }: ContactProps) => {
             ref={form}
             onSubmit={sendEmail}
             method="post"
-            className="flex flex-col gap-5 items-end my-auto md:justify-center md:h-full md:w-3/5 md:pt-20"
+            className="flex flex-col gap-5 items-end my-auto md:justify-center md:h-full sm:w-full lg:w-3/5 md:pt-20 "
           >
             <InputText
               required
               type="text"
-              name="user_name"
+              name="from_name"
               placeholder="Nombre"
             />
             <InputText

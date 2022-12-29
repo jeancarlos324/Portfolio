@@ -42,3 +42,14 @@ export const dropIn = {
     opacity: 0,
   },
 };
+
+export const imageAnimate = {
+  offscreen: { y: -40, x: 0, opacity: 0 },
+  onscreen: {
+    // x: 50,
+    y: 0,
+    opacity: 1,
+    // rotate: [0, 10, 0],
+    transition: { type: "spring", bounce: 0.5, duration: 1.2 },
+  },
+};
