@@ -11,16 +11,16 @@ const About = ({ className }: AboutProps) => {
   return (
     <section
       id="aboutme"
-      className={`${className} flex flex-col-reverse md:flex-row pt-10`}
+      className={`${className} flex flex-col-reverse lg:flex-row pt-10`}
     >
-      <motion.div className="w-full md:w-1/2 flex justify-center items-center animation-card">
+      <motion.div className="w-full md:w-2/5 md:m-auto lg:w-1/2 flex justify-center items-center animation-card ">
         <img
           className="md:w-full md:h-full p-5 sm:h-4/5 sm:w-4/5"
           src={aboutme}
           alt="home"
         />
       </motion.div>
-      <div className="w-full md:w-1/2 flex  flex-col gap-5 md:my-auto md:px-10">
+      <div className="w-full  lg:w-1/2 flex  flex-col gap-5 md:my-auto md:px-10">
         <h2 className="text-title-card font-chivo text-center md:text-left font-bold pt-10">
           <HtmlTool tagHtml="<h2>" />
           ¿Quién soy?
@@ -35,9 +35,8 @@ const About = ({ className }: AboutProps) => {
           </p>
           <p className="md:pl-10 pb-2">
             Tengo experiencia en desarrollo web front-end y back-end, también
-            con entornos de desarrollo fullstack como Remix.run,a su vez con
-            despliegue de aplicaciones con Docker y trabajo en equipo, siendo
-            líder del mismo.
+            con entornos de desarrollo fullstack como Remix.run, a su vez con
+            despliegue de aplicaciones con Docker.
           </p>
           <p className="md:pl-10">
             Actualmente he desarrollado proyectos de pequeña a mediana escala,

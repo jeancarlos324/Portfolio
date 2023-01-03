@@ -17,7 +17,7 @@ const Skills = ({ className }: SkillsProps) => {
         Habilidades
         <HtmlTool tagHtml="</h2>" />
       </h2>
-      <div className="flex flex-col md:flex-row w-full h-3/5">
+      <div className="flex flex-col-reverse md:flex-row w-full h-3/5">
         <div className=" md:w-1/2 flex justify-center items-center">
           <div className=" relative w-fit">
             <span className="absolute top-3 inset-[33%] text-xs text-center h-fit w-1/3">
@@ -53,7 +53,7 @@ const Skills = ({ className }: SkillsProps) => {
             <SvgFramer coords={coords} />
           </div>
         </div>
-        <div className="my-auto lg:w-1/2 lg:px-20">
+        <div className="my-auto lg:w-1/2 md:pl-20 lg:px-20">
           <h3 className="text-xl font-chivo text-center font-bold pb-4 ">
             <HtmlTool tagHtml="<h3>" />
             Cada día es un Nuevo Reto

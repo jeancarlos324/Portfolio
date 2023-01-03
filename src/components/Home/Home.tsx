@@ -20,7 +20,7 @@ const Home = ({ className }: HomeProp) => {
           x: { duration: 1 },
           default: { ease: "linear" },
         }}
-        className="w-full md:w-1/2 flex  flex-col gap-5 md:my-auto p-5 md:px-10"
+        className="w-full md:w-3/5 lg:w-1/2 flex  flex-col gap-5 md:my-auto p-5 md:px-10"
       >
         <h1 className="text-title py-5 md:pl-10 flex flex-col gap-5 font-manrope font-bold text-center md:text-left">
           <span className="text-3xl font-chivo">¡Hola! Soy</span> Jean Ticona
@@ -61,7 +61,7 @@ const Home = ({ className }: HomeProp) => {
           </motion.button>
         </div>
       </motion.div>
-      <motion.div className="w-full  md:w-1/2 flex justify-center items-center animation-card">
+      <motion.div className="w-full  md:w-2/5 lg:w-1/2 flex justify-center items-center animation-card">
         <motion.img
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, scale: 1 }}
