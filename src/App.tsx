@@ -52,16 +52,18 @@ const App = () => {
             <About className="h-full container mx-auto" />
           </Template>
         </div>
-        <Template className="h-full md:h-4/5">
-          <Tecnologies className="h-full container mx-auto" />
-        </Template>
-        <div className="h-full w-full dark:bg-secondary-color-gradiant">
+        <Template className="h-full ">
           <Skills className="h-full container mx-auto" />
+        </Template>
+        <div className="h-full w-full md:h-4/5 dark:bg-secondary-color-gradiant">
+          <Template className="h-full w-full">
+            <Tecnologies className="h-full container mx-auto" />
+          </Template>
         </div>
         <Template className="w-full h-[120%]">
-          <ShowProjects className="md:h-[120%] sm:h-[250%] container mx-auto dark:bg-secondary-color-gradiant" />
+          <ShowProjects className="md:h-[120%] sm:h-[250%] container mx-auto " />
         </Template>
-        <Template className="w-full h-[85%]  sm:h-full">
+        <Template className="w-full h-[85%]  sm:h-full dark:bg-secondary-color-gradiant">
           <Contact className="h-full container mx-auto" />
         </Template>
         <Footer className=" md:h-[110px] " />

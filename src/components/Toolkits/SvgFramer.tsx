@@ -1,43 +1,14 @@
 import { motion } from "framer-motion";
-import React from "react";
-export const SvgFramer = () => {
-  const draw = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: (i: number) => {
-      const delay = 2 + i * 0.5;
-      return {
-        pathLength: 1,
-        opacity: 1,
-        transition: {
-          pathLength: { delay, type: "spring", duration: 3, bounce: 0 },
-          opacity: { delay, duration: 0.03 },
-        },
-      };
-    },
-  };
-  const draw2 = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: (i: number) => {
-      const delay = 6 + i * 0.5;
-      return {
-        pathLength: 1,
-        opacity: 0,
-        transition: {
-          pathLength: { delay, type: "spring", duration: 3, bounce: 0 },
-          opacity: { delay, duration: 0.3 },
-        },
-        fill: "#ffffff44",
-      };
-    },
-  };
-
-  const coords = [90, 20, 40, 60, 50];
+interface Svgator {
+  coords: number[];
+}
+export const SvgFramer = ({ coords }: Svgator) => {
+  // const coords = [90, 85, 70, 60, 85];
   return (
     <motion.svg
-      className="border border-yellow-300"
-      width="300"
-      height="300"
-      viewBox="0 0 500 500"
+      width="350"
+      height="350"
+      viewBox="-50 -50 600 600"
       initial="hidden"
       animate="visible"
       fill="#ffffff"
@@ -47,8 +18,9 @@ export const SvgFramer = () => {
         y1="50"
         x2="250"
         y2="250"
-        stroke="#00cc88"
-        variants={draw}
+        strokeWidth={2}
+        stroke="#ffffff33"
+        strokeLinecap="round"
         custom={1}
       />
       <motion.line
@@ -56,8 +28,8 @@ export const SvgFramer = () => {
         y1="200"
         x2="250"
         y2="250"
-        stroke="#00cc88"
-        variants={draw}
+        strokeWidth={2}
+        stroke="#ffffff33"
         custom={5}
       />
       <motion.line
@@ -65,8 +37,8 @@ export const SvgFramer = () => {
         y1="250"
         x2="125"
         y2="450"
-        stroke="#00cc88"
-        variants={draw}
+        strokeWidth={2}
+        stroke="#ffffff33"
         custom={2}
       />
       <motion.line
@@ -74,8 +46,8 @@ export const SvgFramer = () => {
         y1="450"
         x2="250"
         y2="250"
-        stroke="#00cc88"
-        variants={draw}
+        strokeWidth={2}
+        stroke="#ffffff33"
         custom={4}
       />
       <motion.line
@@ -83,16 +55,25 @@ export const SvgFramer = () => {
         y1="200"
         x2="250"
         y2="250"
-        stroke="#00cc88"
-        variants={draw}
+        strokeWidth={2}
+        stroke="#ffffff33"
         custom={3}
       />
       <motion.polygon
         points="250,50 450,200 375,450 125,450 50,200"
-        stroke="#ff00ff"
+        stroke="#f92847"
         fill="#00000000"
-        variants={draw}
-        custom={7}
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        strokeWidth={4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "loop",
+          repeatDelay: 4,
+        }}
       />
       <motion.polygon
         points={`250,${250 - 2 * coords[0]}
@@ -101,19 +82,18 @@ export const SvgFramer = () => {
         ${250 - coords[3] * 1.25},${250 + coords[3] * 2}
         ${250 - coords[4] * 2},${250 - coords[4] / 2}`}
         stroke="#ffffff44"
-        fill="#00000000"
-        variants={draw2}
-        custom={1}
+        initial={{ pathLength: 0, fill: "#00000000" }}
+        animate={{ pathLength: 1, fill: "#00000077" }}
+        strokeWidth={6}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          repeatType: "loop",
+          repeatDelay: 2,
+        }}
       />
-      <motion.text
-        x="200"
-        y="30"
-        className="small font-manrope"
-        variants={draw}
-        custom={6}
-      >
-        This is a test
-      </motion.text>
     </motion.svg>
   );
 };

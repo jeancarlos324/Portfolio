@@ -11,18 +11,19 @@ const menu = [
   { id: 1, name: "Home", ref: "#home" },
   { id: 2, name: "Sobre Mí", ref: "#aboutme" },
   { id: 3, name: "Habilidades", ref: "#skills" },
-  { id: 4, name: "Proyectos", ref: "#projects" },
+  { id: 4, name: "Tecnologías", ref: "#tecnologies" },
+  { id: 5, name: "Proyectos", ref: "#projects" },
 ];
 const Header = ({ className }: HeaderProps) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <motion.header
-      className={`sticky top-0 flex flex-col  w-full  ${className} justify-between items-center md:px-5 font-victor text-menu`}
+      className={`sticky top-0 flex flex-col  w-full  ${className} justify-between items-center md:px-5  text-menu`}
     >
       <div className="py-2 md:py-1  flex w-full md:h-16 items-center justify-between">
-        <motion.div className=" flex md:h-full pl-5 items-center ">
+        <motion.div className=" flex md:h-full pl-5 items-center font-manrope ">
           <motion.a
-            href="#"
+            href="#home"
             initial={{ border: "1px" }}
             whileHover={{
               opacity: 0.9,
@@ -36,7 +37,7 @@ const Header = ({ className }: HeaderProps) => {
           </motion.a>
         </motion.div>
         <div className="hidden md:flex items-center gap-10 h-full">
-          <motion.div className="flex h-full w-full justify-center gap-5 font-victor ">
+          <motion.div className="flex h-full w-full justify-center gap-4 font-victor ">
             {menu.map((option) => (
               <Option
                 className=" relative "
