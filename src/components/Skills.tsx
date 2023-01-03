@@ -17,7 +17,7 @@ const Skills = ({ className }: SkillsProps) => {
         Habilidades
         <HtmlTool tagHtml="</h2>" />
       </h2>
-      <div className="flex flex-col-reverse md:flex-row w-full h-3/5">
+      <div className="flex flex-col md:flex-row w-full h-3/5">
         <div className=" md:w-1/2 flex justify-center items-center">
           <div className=" relative w-fit">
             <span className="absolute top-3 inset-[33%] text-xs text-center h-fit w-1/3">
