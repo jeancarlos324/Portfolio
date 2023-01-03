@@ -37,7 +37,7 @@ const About = ({ className }: AboutProps) => {
             Tengo experiencia en desarrollo web front-end y back-end, también
             con entornos de desarrollo fullstack como Remix.run,a su vez con
             despliegue de aplicaciones con Docker y trabajo en equipo, siendo
-            líder de equipo.
+            líder del mismo.
           </p>
           <p className="md:pl-10">
             Actualmente he desarrollado proyectos de pequeña a mediana escala,
