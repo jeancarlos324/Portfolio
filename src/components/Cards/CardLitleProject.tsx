@@ -14,14 +14,12 @@ const CardLitleProject = ({
   className,
   ...otherProps
 }: CardProjectProps) => {
+  console.log(data.images);
   return (
     <div className=" flex justify-center items-center backdrop-blur-md bg-[#ffffff11] rounded-2xl">
-      <motion.div
-        className={`${className} body-container`}
-        {...otherProps}
-      >
-        <motion.div className="h-full card relative">
-          <img src={data.images[0].image} className="h-full" />
+      <motion.div className={`${className} body-container`} {...otherProps}>
+        <motion.div className="h-full card relative rounded-xl">
+          <img src={data.images[3].image} className="h-full" />
           <div className="contentBx flex flex-col items-center gap-4">
             <h2 className="uppercase font-bold text-3xl px-1">{data.title} </h2>
             <div className="size justify-center">
@@ -36,6 +34,9 @@ const CardLitleProject = ({
                   <img src={technologic.image} className="h-full w-full " />
                 </div>
               ))}
+            </div>
+            <div className="cursor-pointer text-sm ">
+              {`> Click para ver más <`}
             </div>
           </div>
         </motion.div>

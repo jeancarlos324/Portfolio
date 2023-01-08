@@ -1,14 +1,17 @@
 import Rick3 from "../assets/proyects/rickandmorty1.png";
+import Rick4 from "../assets/proyects/rickandmorty-logo.svg";
 import Rick2 from "../assets/proyects/rickandmorty2.png";
 import Rick from "../assets/proyects/rickandmorty3.png";
 import Pokemon3 from "../assets/proyects/pokemon1.png";
 import Pokemon2 from "../assets/proyects/pokemon2.png";
 import Pokemon1 from "../assets/proyects/pokemon3.png";
-import Pokemon4 from "../assets/proyects/pokemon4.png";
+import Pokemon4 from "../assets/proyects/poke-logo.svg";
+import Pokemon5 from "../assets/proyects/pokemon4.png";
 import Ecommerce1 from "../assets/proyects/ecommerce1.png";
 import Ecommerce2 from "../assets/proyects/ecommerce2.png";
 import Ecommerce3 from "../assets/proyects/ecommerce3.png";
-import Ecommerce4 from "../assets/proyects/ecommerce4.png";
+import Ecommerce4 from "../assets/proyects/ecommerce-logo.svg";
+import Ecommerce5 from "../assets/proyects/ecommerce4.png";
 export const proyects = [
   {
     id: 1,
@@ -23,6 +26,7 @@ export const proyects = [
       { id: 1, image: Rick },
       { id: 2, image: Rick2 },
       { id: 3, image: Rick3 },
+      { id: 4, image: Rick4 },
     ],
     technologies: [
       {
@@ -65,6 +69,7 @@ export const proyects = [
       { id: 2, image: Pokemon2 },
       { id: 3, image: Pokemon3 },
       { id: 4, image: Pokemon4 },
+      { id: 5, image: Pokemon5 },
     ],
     technologies: [
       {
@@ -119,6 +124,7 @@ export const proyects = [
       { id: 2, image: Ecommerce2 },
       { id: 3, image: Ecommerce3 },
       { id: 4, image: Ecommerce4 },
+      { id: 5, image: Ecommerce5 },
     ],
     technologies: [
       {
@@ -178,6 +184,8 @@ export const proyects = [
       { id: 1, image: Ecommerce1 },
       { id: 2, image: Ecommerce2 },
       { id: 3, image: Ecommerce3 },
+      { id: 4, image: Ecommerce4 },
+      { id: 5, image: Ecommerce5 },
     ],
     technologies: [
       {

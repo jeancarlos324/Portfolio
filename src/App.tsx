@@ -61,7 +61,7 @@ const App = () => {
           </Template>
         </div>
         <Template className="w-full h-[120%]">
-          <ShowProjects className="md:h-[120%] sm:h-[250%] container mx-auto " />
+          <ShowProjects className="md:h-[100%] sm:h-[250%] container mx-auto " />
         </Template>
         <Template className="w-full h-[85%]  sm:h-full dark:bg-secondary-color-gradiant">
           <Contact className="h-full container mx-auto" />

@@ -20,15 +20,15 @@ const ShowProjects = ({ className }: ShowProjectsProps) => {
   };
   return (
     <section
-      className={`${className} flex flex-col items-center justify-center  pt-10 `}
+      className={`${className} flex flex-col items-center justify-center pt-5 `}
       id="projects"
     >
-      <h2 className="text-subtitle font-chivo text-center font-bold py-5">
+      <h2 className=" text-subtitle font-chivo text-center font-bold py-5">
         <HtmlTool tagHtml="<h2>" />
         Proyectos
         <HtmlTool tagHtml="</h2>" />
       </h2>
-      <div className=" w-full p-2 py-5 lg:px-20">
+      <div className="h-4/5 w-full p-2 py-5 lg:px-20">
         <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10">
           {items.map((item) => (
             <CardLitleProject
