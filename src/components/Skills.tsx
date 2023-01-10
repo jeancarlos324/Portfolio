@@ -17,8 +17,8 @@ const Skills = ({ className }: SkillsProps) => {
         Habilidades
         <HtmlTool tagHtml="</h2>" />
       </h2>
-      <div className="flex flex-col md:flex-row w-full h-3/5">
-        <div className=" md:w-1/2 flex justify-center items-center">
+      <div className="flex flex-col md:flex-row w-full h-3/5 items-center">
+        <div className="w-[50%]  md:w-1/2 flex justify-center items-center">
           <div className=" relative w-fit">
             <span className="absolute top-3 inset-[33%] text-xs text-center h-fit w-1/3">
               Trabajo en Equipo
@@ -26,7 +26,7 @@ const Skills = ({ className }: SkillsProps) => {
             <span className="absolute top-8 inset-[47%] text-sm">
               {coords[0]}%
             </span>
-            <span className="absolute inset-y-[33%] right-0 text-xs text-center h-fit w-1/5">
+            <span className="absolute inset-y-[32%] right-3 sm:right-0 text-xs text-center h-fit w-1/5">
               Comunicación
             </span>
             <span className="absolute inset-y-[38%] right-5 text-sm">
@@ -63,7 +63,7 @@ const Skills = ({ className }: SkillsProps) => {
             <HtmlTool tagHtml="<p>" />
             Resolviendo problemas, poniendome retos e investigando nuevas
             tecnologías es lo que me ayudó a mejorar mis habilidades, cada dia
-            es un nuevo reto contra mi, mejorando un poco mas de lo que fuí ayer
+            es un nuevo reto contra mi, mejorando un poco más de lo que fuí ayer
             para ser el mejor mañana.
             <HtmlTool tagHtml="</p>" />
           </p>

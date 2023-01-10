@@ -58,6 +58,49 @@ export const proyects = [
   },
   {
     id: 2,
+    title: "Rick and Morty",
+    subtitle:
+      "Consumiendo un API y recreando un buscador de la serie Rick and Morty",
+    urlSite: "https://rickandmortiapireact.netlify.app/",
+    urlRepo: "https://github.com/jeancarlos324/RickAndMortyAPI/",
+    description:
+      "Consumiendo una API de la conocida serie de 'Rick and Morty' y construyendo un interfaz de consulta de los universos de la serie. Mostrando a cada uno de los habitantes pertenecientes a sus respectivos universos. Desarrollado con JAVASCRIPT, usando REACTJS y estilizado con TAILWIND",
+    images: [
+      { id: 1, image: Rick },
+      { id: 2, image: Rick2 },
+      { id: 3, image: Rick3 },
+      { id: 4, image: Rick4 },
+    ],
+    technologies: [
+      {
+        id: 1,
+        title: "React JS",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+      },
+      {
+        id: 2,
+        title: "JavaScript",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      },
+      {
+        id: 3,
+        title: "Taildwind",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png",
+      },
+      {
+        id: 4,
+        title: "Framer Motion",
+        image:
+          "https://seeklogo.com/images/F/framer-motion-logo-DA1E33CAA1-seeklogo.com.png",
+      },
+    ],
+    duration: "03 a 05 horas aprox",
+  },
+  {
+    id: 3,
     title: "Pokedex",
     subtitle: "Recreando un Pokedex consumiendo una API y usando enrutadores",
     urlSite: "https://pokedexapipoke.netlify.app/",
@@ -112,7 +155,7 @@ export const proyects = [
     duration: "10 a 12 horas aprox",
   },
   {
-    id: 3,
+    id: 4,
     title: "Ecommerce",
     subtitle: "Recreando una API de Ecommerce, enrutando y diseñando interfaz",
     urlSite: "https://ecommerceacademlojc.netlify.app/",
@@ -173,7 +216,7 @@ export const proyects = [
     duration: "12 a 14 horas aprox",
   },
   {
-    id: 4,
+    id: 5,
     title: "Ecommerce",
     subtitle: "Recreando una API de Ecommerce, enrutando y diseñando interfaz",
     urlSite: "https://ecommerceacademlojc.netlify.app/",

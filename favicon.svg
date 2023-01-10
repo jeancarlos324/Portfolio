@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="80mm" height="80mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 8000 8000"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID1" horiz-adv-x="681" font-variant="normal" style="fill-rule:nonzero" font-weight="900">
+	<font-face 
+		font-family="Roboto Black">
+		<font-face-src>
+			<font-face-name name="Roboto Black"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="J" horiz-adv-x="562" d="M336.834 711l170.998 0 0 -488c0,-45.3341 -10.499,-85.6668 -31.4989,-121.167 -20.9999,-35.5 -50.3335,-62.9998 -88.0008,-82.5013 -37.4986,-19.4995 -79.5004,-29.3336 -125.666,-29.3336 -77.4999,0 -137.667,19.5015 -180.668,58.6672 -42.9981,39.1677 -64.4982,94.5006 -64.4982,166.168l171.999 0c0,-32.6679 5.50154,-56.1665 16.8341,-70.8333 11.1658,-14.6668 30.0005,-22.0002 56.3332,-22.0002 23.834,0 42.1666,8.83382 54.9995,26.6662 12.833,17.6676 19.1681,42.5 19.1681,74.501l0 487.833z"/>
+  </font>
+  <font id="FontID0" horiz-adv-x="544" font-variant="normal" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Victor Mono">
+		<font-face-src>
+			<font-face-name name="Victor Mono Regular"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="{" horiz-adv-x="544" d="M443.499 -74.0009c-99.8315,0 -152.666,30.0005 -152.666,130.001 0,63.6666 16.3339,100.167 16.3339,142.834 -0.333427,65.5005 -42.1666,113.667 -114,164.667 71,51.0004 113.667,102.832 113.667,168.333 0,43.667 -17.1675,77.3331 -17.1675,137.334 0.166713,100 53.0009,131.833 153.833,131.833l0 58.0004c-142.665,0 -215.332,-47.9995 -215.332,-186.167 0,-59.1673 16.3339,-108.334 16.3339,-150.167 -0.333427,-32.6659 -49.5,-88.1655 -144.834,-159.166 96.3325,-71.8336 144.501,-122.834 144.501,-155.5 0,-41.8331 -16.3339,-102.834 -16.3339,-154.668 0.333427,-138.166 73.0006,-185.332 215.832,-185.332l-0.166713 57.9984z"/>
+   <glyph unicode="}" horiz-adv-x="544" d="M102.501 -131.999c141.667,0 215.332,47.166 215.332,185.332 0,51.8339 -16.3339,112.835 -16.3339,154.668 0.333427,32.6659 47.6681,83.6663 144.001,155.5 -95.4989,71 -143.667,126.5 -143.667,159.166 0,41.8331 16.3339,90.9997 16.3339,150.167 -0.333427,138.168 -73.8322,186.167 -215.665,186.167l0 -58.0004c99.9982,0 153.666,-31.8323 153.666,-131.833 0,-60.0009 -17.3342,-93.6671 -17.3342,-137.334 0.333427,-65.5005 42.1666,-117.332 113,-168.333 -71.8316,-51.0004 -112.666,-99.1666 -112.666,-164.667 0,-42.6667 16.3339,-79.167 16.3339,-142.834 -0.333427,-100 -53.9992,-130.001 -153.166,-130.001l0.166713 -57.9984z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Roboto Black";font-variant:normal;font-weight:900;src:url("#FontID1") format(svg)}
+    @font-face { font-family:"Victor Mono";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .fil1 {fill:#E0E5E7}
+    .fil0 {fill:#F92847}
+    .fnt0 {font-weight:normal;font-size:5038.59px;font-family:'Victor Mono'}
+    .fnt1 {font-weight:900;font-size:5038.59px;font-family:'Roboto Black'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g transform="matrix(0.999997 0 0 0.999997 -4159.2 1973.94)">
+   <text x="4000" y="4000"  class="fil0 fnt0">{</text>
+   <text x="9580.24" y="4000"  class="fil0 fnt0">}</text>
+  </g>
+  <g transform="matrix(0.999997 0 0 0.999997 -4159.2 1973.94)">
+   <text x="6748.55" y="4000"  class="fil1 fnt1">J</text>
+  </g>
+ </g>
+</svg>

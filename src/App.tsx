@@ -34,36 +34,36 @@ const App = () => {
       className={`h-screen w-full relative overflow-y-hidden
       ${darkToggle && "dark"} font-manrope `}
     >
-      <div className=" w-full h-full  bg-white dark:bg-secondary-color dark:text-white overflow-y-auto scroll-smooth scroll-m-10 snap-y">
+      <div className=" w-full h-full  bg-white dark:bg-secondary-color dark:text-white overflow-y-auto scroll-smooth scroll-m-10 snap-proximity snap-y">
         {/* <button
           className="absolute z-30 bg-white text-primary-color dark:bg-primary-color dark:text-white w-1/4 border-2 m-0 border-black dark:border-white"
           onClick={() => setDarkToggle(!darkToggle)}
         >
           {darkToggle ? "ligth" : "dark"}
         </button> */}
-        <Header className="dark:bg-primary-color bg-gray-light-gradiant z-10 dark:text-gray-light-gradiant" />
-        <div className="h-[105%] sm:h-[130%] md:h-full w-full">
+        <Header className="dark:bg-primary-color bg-gray-light-gradiant z-10 dark:text-gray-light-gradiant " />
+        <div className="h-[105%] sm:h-[130%] md:h-full w-full md:snap-start ">
           <Template className="h-full">
             <Home className="h-full container mx-auto" />
           </Template>
         </div>
-        <div className="h-[110%] sm:h-[130%] md:h-full w-full dark:bg-secondary-color-gradiant">
+        <div className="h-[110%] sm:h-[130%] md:h-full w-full dark:bg-secondary-color-gradiant snap-center">
           <Template className="h-full">
             <About className="h-full container mx-auto" />
           </Template>
         </div>
-        <Template className="h-full ">
+        <Template className="h-full snap-center">
           <Skills className="h-full container mx-auto" />
         </Template>
-        <div className="h-full w-full md:h-4/5 dark:bg-secondary-color-gradiant">
+        <div className="h-full w-full md:h-4/5 dark:bg-secondary-color-gradiant snap-center">
           <Template className="h-full w-full">
             <Tecnologies className="h-full container mx-auto" />
           </Template>
         </div>
-        <Template className="w-full h-[120%]">
-          <ShowProjects className="md:h-[100%] sm:h-[250%] container mx-auto " />
+        <Template className="w-full h-full sm:h-[150%] snap-start">
+          <ShowProjects className="h-full container mx-auto p-2 " />
         </Template>
-        <Template className="w-full h-[85%]  sm:h-full dark:bg-secondary-color-gradiant">
+        <Template className="w-full h-[85%]  sm:h-full dark:bg-secondary-color-gradiant snap-center">
           <Contact className="h-full container mx-auto" />
         </Template>
         <Footer className=" md:h-[110px] " />
