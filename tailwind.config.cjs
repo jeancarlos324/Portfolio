@@ -23,7 +23,7 @@ module.exports = {
       fontSize: {
         "title-card": ["24px", { lineHeight: "32px" }],
         "subtitle-card": ["16px", { lineHeight: "20px" }],
-        "litle-title-card": ["14px", { lineHeight: "20px" }],
+        "litle-title-card": ["12px", { lineHeight: "20px" }],
         "content-card": ["14px", { lineHeight: "24px" }],
         menu: ["1em", { lineHeight: "16px" }],
         subtitle: ["2em", { lineHeight: "16px" }],

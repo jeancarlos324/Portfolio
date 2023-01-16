@@ -93,7 +93,7 @@ const Contact = ({ className }: ContactProps) => {
               className="border border-red-gradiant  w-full bg-transparent
                p-3 rounded-md caret-red-500"
               cols={20}
-              rows={6}
+              rows={5}
               placeholder="Mensaje"
             ></textarea>
             <motion.button

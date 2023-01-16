@@ -1,6 +1,6 @@
 export const cardAnimation = {
   hidden: {
-    transform: "scale(0) rotate(720deg)",
+    transform: "scale(0) rotate(180deg)",
     opacity: 0,
     transition: {
       delay: 0.3,
@@ -14,7 +14,7 @@ export const cardAnimation = {
     },
   },
   exit: {
-    transform: "scale(0) rotate(-720deg)",
+    transform: "scale(0) rotate(-180deg)",
     opacity: 0,
     transition: {
       duration: 0.3,

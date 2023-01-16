@@ -26,6 +26,10 @@
   }
 }
 
+/* *{
+  outline: 1px solid red;
+} */
+
 @keyframes blink {
   50% {
     border-color: transparent;
@@ -47,7 +51,7 @@
 
 ::-webkit-scrollbar {
   width: 4px;
-  height: 8px;
+  height: 4px;
   background-color: rgba(168, 168, 168, 0.237);
   border-radius: 10px;
 }
@@ -72,7 +76,7 @@
 @media (min-width: 640px) {
   ::-webkit-scrollbar {
     width: 6px;
-    height: 8px;
+    height: 6px;
     background-color: rgba(168, 168, 168, 0.237);
     border-radius: 10px;
   }
@@ -83,7 +87,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: rgb(249, 40, 71);
+    background-color: rgb(37, 38, 40);
     border-radius: 10px;
   }
 

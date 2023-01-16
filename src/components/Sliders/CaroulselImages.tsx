@@ -31,7 +31,7 @@ const swipePower = (offset: number, velocity: number) => {
 
 type dataProp = { [key: string]: any };
 interface CaroulselImagesProps extends HTMLMotionProps<"div"> {
-  images: dataProp[];
+  images: dataProp[] | { id: number; image: string }[];
   className?: string;
   hImage?: string;
 }

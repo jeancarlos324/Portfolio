@@ -39,7 +39,7 @@ const Footer = ({ className }: FooterProps) => {
           ))}
         </ul>
       </div>
-      <div className="dark:bg-secondary-color-gradiant font-victor p-1 px-3 flex justify-center md:justify-end text-xs">
+      <div className="dark:bg-secondary-color-gradiant font-manrope p-1 px-3 flex justify-center md:justify-end text-xs">
         Jean Ticona 2022. All Rights Reserved
       </div>
     </div>

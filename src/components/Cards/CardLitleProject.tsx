@@ -22,14 +22,14 @@ const CardLitleProject = ({
       // "
     >
       <motion.div
-        className={`${className} h-full body-container flex justify-center items-center snap-center`}
+        className={`${className} h-full body-container flex justify-center items-center`}
         {...otherProps}
       >
-        <motion.div className=" card relative rounded-xl min-w-[320px] h-[250px] sm:h-full sm:w-full ">
-          <motion.img src={data.images[3].image} className="h-[250px] w-full my-auto" />
+        <motion.div className=" card relative rounded-xl min-w-[320px] h-[230px] sm:h-full sm:w-full ">
+          <motion.img src={data.images[3].image} className="h-[280px] w-full my-auto" />
           <div className="contentBx flex flex-col items-center gap-1 md:gap-4 ">
-            <h2 className="uppercase font-bold text-2xl md:text-3xl px-1">
-              {data.title}{" "}
+            <h2 className="font-bold font-chivo text-xl lg:text-3xl px-1">
+              {data.title}
             </h2>
             <div className="size justify-center">
               <span className="w-5/6 text-sm">{data.subtitle} </span>

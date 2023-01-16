@@ -6,7 +6,7 @@ interface SkillsProps {
   className?: string;
 }
 const Skills = ({ className }: SkillsProps) => {
-  const coords = [87, 80, 78, 95, 85];
+  const coords = [87, 80, 85, 95, 89];
   return (
     <section
       className={`${className} flex flex-col items-center justify-center gap-5  px-5`}
@@ -17,7 +17,7 @@ const Skills = ({ className }: SkillsProps) => {
         Habilidades
         <HtmlTool tagHtml="</h2>" />
       </h2>
-      <div className="flex flex-col md:flex-row w-full h-3/5 items-center">
+      <div className="flex flex-col md:flex-row w-full sm:h-3/5 items-center">
         <div className="w-[50%]  md:w-1/2 flex justify-center items-center">
           <div className=" relative w-fit">
             <span className="absolute top-3 inset-[33%] text-xs text-center h-fit w-1/3">

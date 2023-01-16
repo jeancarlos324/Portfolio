@@ -15,7 +15,7 @@ const Tecnologies = ({ className }: TecnologiesProps) => {
       className={`${className} flex flex-col items-center justify-center gap-5  px-5 py-10`}
       id="tecnologies"
     >
-      <h2 className="text-subtitle font-chivo text-center font-bold pb-5">
+      <h2 className="text-subtitle font-chivo text-center font-bold sm:pb-5">
         <HtmlTool tagHtml="<h2>" />
         Tecnologías
         <HtmlTool tagHtml="</h2>" />

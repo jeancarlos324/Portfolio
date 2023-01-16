@@ -2,11 +2,22 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { HTMLMotionProps } from "framer-motion";
 import CaroulselImages from "../Sliders/CaroulselImages";
+import CarouselMultiple from "../Sliders/CarouselMultiple";
 
-type dataProp = { [key: string]: any };
+export type dataProp = {
+  id: number;
+  title: string;
+  subtitle: string;
+  urlSite: string;
+  urlRepo: string;
+  description: string;
+  duration: string;
+  images?: { id: number; image: string }[];
+  technologies?: { id: number; title: string; image: string }[];
+};
 
 interface CardProjectProps extends HTMLMotionProps<"div"> {
-  data: dataProp;
+  data: dataProp | null;
   onClick?: () => void;
 }
 
@@ -18,7 +29,7 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
     <motion.div {...otherProps} onClick={(e) => e.stopPropagation()}>
       <div className="relative">
         <CaroulselImages
-          images={data.images}
+          images={data?.images!}
           className="rounded-t-popup"
           hImage="h-[25vh] md:h-[40vh] "
         />
@@ -27,9 +38,9 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
           <div className="h-full flex flex-col gap-3">
             <div className="flex flex-col">
               <div className="flex flex-col md:flex-row md:justify-between">
-                <h2 className="text-title-card font-bold">{data.title}</h2>
+                <h2 className="text-title-card font-bold">{data?.title}</h2>
                 <motion.a
-                  href={data.urlSite}
+                  href={data?.urlSite}
                   target="_blank"
                   whileHover={{ scale: 1.1 }}
                 >
@@ -39,7 +50,9 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
                   </span>
                 </motion.a>
               </div>
-              <span className="text-subtitle-card italic">{data.subtitle}</span>
+              <span className="text-subtitle-card italic">
+                {data?.subtitle}
+              </span>
             </div>
             <div>
               <AnimatePresence>
@@ -49,7 +62,7 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
                     onClick={toggleOpen}
                     initial={{ borderRadius: 10 }}
                   >
-                    <motion.div className="font-semibold" layout>
+                    <motion.div className="font-semibold text-litle-title-card" layout>
                       Descripción:
                     </motion.div>
                     <AnimatePresence>
@@ -59,14 +72,14 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
-                          className="max-h-[80px] px-2 text-justify italic text-content-card  overflow-y-auto"
+                          className=" max-h-[100px] px-2 text-justify italic text-content-card  overflow-y-auto"
                         >
-                          {data.description}
+                          {data?.description}
                         </motion.div>
                       ) : (
                         <div className="cursor-pointer">
                           <p className="truncate w-full text-justify italic text-content-card">
-                            {data.description}
+                            {data?.description}
                           </p>
                           <span className="text-sky-500 italic cursor-pointer">
                             +ver más
@@ -78,14 +91,14 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
                 </motion.ul>
               </AnimatePresence>
             </div>
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold">Herramientas y Tecnologias: </h3>
+            <div className="flex flex-col gap-3 w-full ">
+              <h3 className="font-semibold text-litle-title-card">Herramientas y Tecnologias: </h3>
               <motion.div className="flex justify-around gap-5 items-center">
-                {data.technologies.map((tecnologic: any) => (
+                {data?.technologies?.map((tecnologic: any) => (
                   <motion.div
                     whileHover={{ scale: 1.2 }}
                     key={tecnologic.id}
-                    className="flex flex-col justify-center items-center"
+                    className="flex flex-col justify-center items-center font-chivo"
                   >
                     <img
                       className="h-[40px] w-[40px] "
@@ -103,8 +116,8 @@ const CardProject = ({ data, onClick, ...otherProps }: CardProjectProps) => {
               <h3 className="font-semibold text-litle-title-card italic">
                 Tiempo estimado de desarrollo:
               </h3>
-              <span className="text-litle-title-card italic">
-                {data.duration}
+              <span className="text-litle-title-card italic font-chivo">
+                {data?.duration}
               </span>
             </motion.div>
           </div>
