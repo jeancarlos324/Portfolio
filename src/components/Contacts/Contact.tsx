@@ -57,7 +57,7 @@ const Contact = ({ className }: ContactProps) => {
           <h3 className="text-xl font-chivo text-center md:text-left ">CV</h3>
           <p className="text-md">
             <a
-              href="https://drive.google.com/file/d/1d5ABgCc-kWdLDQySW8_ftu49mqjp2t8E/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Z6MpBjE0a1YykOV9klOlfBLEOEcixYTA/view?usp=sharing"
               target={"_blank"}
               className="text-red-gradiant"
             >
