@@ -13,7 +13,7 @@ const Footer = ({ className }: FooterProps) => {
     {
       id: 2,
       name: "fa-brands fa-linkedin",
-      url: "https://www.linkedin.com/in/jean-carlos-ticona-gutierrez-69a824204/",
+      url: "https://www.linkedin.com/in/jean-ticona-69a824204/",
     },
     {
       id: 3,
