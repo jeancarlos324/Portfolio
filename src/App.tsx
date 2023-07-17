@@ -73,12 +73,12 @@ const App = () => {
               },
             },
             particles: {
-              color: { value: "#fff" },
+              color: { value: "#a7a7a79b" },
               links: {
                 color: "#f92847",
                 distance: 150,
                 enable: false,
-                opacity: 0.5,
+                opacity: 0.3,
                 width: 1,
               },
               move: {
