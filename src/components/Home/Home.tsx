@@ -47,7 +47,7 @@ const Home = ({ className }: HomeProp) => {
             className="border-2 border-red-gradiant p-3 rounded-xl font-manrope font-bold text-menu"
           >
             <a
-              href="https://drive.google.com/file/d/1Z6MpBjE0a1YykOV9klOlfBLEOEcixYTA/view?usp=sharing"
+              href="/Jean_Carlos_Ticona_Gutierrez_CV.pdf"
               target={"_blank"}
             >
               Descargar CV
