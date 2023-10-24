@@ -18,7 +18,7 @@ const Header = ({ className }: HeaderProps) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <motion.header
-      className={`sticky top-0 flex flex-col  w-full  ${className} justify-between items-center md:px-5  text-menu`}
+      className={`sticky top-0 flex flex-col  w-full  ${className} justify-between items-center md:px-5  text-menu z-20`}
     >
       <div className="py-2 md:py-1  flex w-full md:h-16 items-center justify-between">
         <motion.div className=" flex md:h-full pl-5 items-center font-manrope ">

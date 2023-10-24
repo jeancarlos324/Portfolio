@@ -30,6 +30,10 @@
   outline: 1px solid red;
 } */
 
+* {
+  cursor: url("svg/cursor.svg"), auto;
+  /* cursor: url("svg/cursor-pointer.svg"), pointer; */
+}
 @keyframes blink {
   50% {
     border-color: transparent;
