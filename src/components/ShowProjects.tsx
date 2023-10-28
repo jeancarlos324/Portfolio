@@ -22,51 +22,41 @@ const ShowProjects = ({ className }: ShowProjectsProps) => {
   };
   return (
     <section
-      className={`${className} flex flex-col items-center justify-center pt-5 `}
+      className={`${className} flex flex-col items-center justify-center pt-5`}
       id="projects"
     >
-      <h2 className=" text-subtitle font-chivo text-center font-bold sm:py-5">
+      <h2 className=" text-subtitle font-chivo text-center font-bold py-5">
         <HtmlTool tagHtml="<h2>" />
         Proyectos
         <HtmlTool tagHtml="</h2>" />
       </h2>
-      <Template className="w-full py-5 sm:py-10">
-        <section>
-          <div className=" mx-auto">
-            <div className="flex justify-center items-center px-2 ">
-              {works.map((item) => (
-                <CardLitleProject
-                  data={item}
-                  key={item.id}
-                  // layoutId={item.id.toString()}
-                  onClick={() => toggleSelect(item)}
-                  className="h-full w-full "
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      </Template>
+      <section className="flex flex-wrap p-2 w-full gap-5 justify-center">
+        {works.map((item) => (
+          <CardLitleProject
+            data={item}
+            key={item.id}
+            // layoutId={item.id.toString()}
+            onClick={() => toggleSelect(item)}
+            className=""
+          />
+        ))}
+      </section>
       <h2 className=" text-2xl font-chivo text-center font-bold sm:py-5">
         <HtmlTool tagHtml="<h2>" />
         Proyectos personales
         <HtmlTool tagHtml="</h2>" />
       </h2>
-      <Template className="w-full h-full sm:pt-10">
-        <section className=" w-full p-2 sm:py-5 lg:px-10">
-          <div className="flex w-full sm:grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-10 overflow-x-auto overflow-y-hidden snap-x snap-mandatory md:snap-none">
-            {items.map((item) => (
-              <CardLitleProject
-                data={item}
-                key={item.id}
-                // layoutId={item.id.toString()}
-                onClick={() => toggleSelect(item)}
-                className="h-full w-full "
-              />
-            ))}
-          </div>
-        </section>
-      </Template>
+      <section className="flex flex-wrap p-2 w-full gap-5 justify-center">
+        {items.map((item) => (
+          <CardLitleProject
+            data={item}
+            key={item.id}
+            // layoutId={item.id.toString()}
+            onClick={() => toggleSelect(item)}
+            className=" "
+          />
+        ))}
+      </section>
       {selectedId && (
         <motion.div
           className="absolute flex justify-center items-center left-0 top-0 h-screen w-screen bg-[#00000066] z-10 overflow-hidden"

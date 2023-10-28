@@ -16,6 +16,7 @@ const menu = [
 ];
 const Header = ({ className }: HeaderProps) => {
   const [isActive, setIsActive] = useState(false);
+  
   return (
     <motion.header
       className={`sticky top-0 flex flex-col  w-full  ${className} justify-between items-center md:px-5  text-menu z-20`}

@@ -3,8 +3,8 @@ import Rick4 from "../assets/proyects/rickandmorty-logo.svg";
 import Rick2 from "../assets/proyects/rickandmorty2.png";
 import Rick from "../assets/proyects/rickandmorty3.png";
 import Pokemon3 from "../assets/proyects/pokemon1.png";
-import Pokemon2 from "../assets/proyects/pokemon2.png";
-import Pokemon1 from "../assets/proyects/pokemon3.png";
+import Pokemon2 from "../assets/proyects/pokemon2.2.png";
+import Pokemon1 from "../assets/proyects/pokemon3.2.png";
 import Pokemon4 from "../assets/proyects/poke-logo.svg";
 import Pokemon5 from "../assets/proyects/pokemon4.png";
 import Ecommerce1 from "../assets/proyects/ecommerce1.png";
@@ -103,8 +103,8 @@ export const proyects = [
     id: 3,
     title: "Pokedex",
     subtitle: "Recreando un Pokedex consumiendo una API y usando enrutadores",
-    urlSite: "https://pokedexapipoke.netlify.app/",
-    urlRepo: "https://github.com/jeancarlos324/pokeAPI",
+    urlSite: "https://pokeapipokev2.netlify.app",
+    urlRepo: "https://github.com/jeancarlos324/pokeapi_v2",
     description:
       "Recreando un POKEDEX con la información de todos los pokemones, visualizando sus estadísticas y habilidades de cada uno. Tambien cuenta con un FILTRO por especie y un buscador en TIEMPO REAL para pokemones especificos. El proyecto se Realizo con JAVASCRIPT, usando REACTJS a su vez enrutado mediante REACT ROUTE, manejo de variables globales con REDUX y estilizado con TAILWIND y FRAMER MOTION.  ",
     images: [

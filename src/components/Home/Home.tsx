@@ -40,17 +40,23 @@ const Home = ({ className }: HomeProp) => {
           </p>
           <HtmlTool tagHtml="</p>" />
         </div>
-        <div className="w-full flex justify-around ">
+        <div className="w-full flex gap-5 md:justify-around ">
           <motion.button
             type="button"
             whileHover={{ scale: 1.1 }}
             className="border-2 border-red-gradiant p-3 rounded-xl font-manrope font-bold text-menu"
           >
-            <a
-              href="/Jean_Carlos_Ticona_Gutierrez_CV.pdf"
-              target={"_blank"}
-            >
-              Descargar CV
+            <a href="/Jean Carlos Ticona Gutierrez CV.pdf" target={"_blank"}>
+              Descargar CV Español
+            </a>
+          </motion.button>
+          <motion.button
+            type="button"
+            whileHover={{ scale: 1.1 }}
+            className="border-2 border-red-gradiant p-3 rounded-xl font-manrope font-bold text-menu"
+          >
+            <a href="/Resume.pdf" target={"_blank"}>
+              Descargar CV Inglés
             </a>
           </motion.button>
           <motion.button
