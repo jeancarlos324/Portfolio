@@ -9,7 +9,8 @@ interface OptionProps {
 const Option = ({ className, label, reference }: OptionProps) => {
   const [onHover, setOnHover] = useState(false);
   return (
-    <div
+    <motion.a
+      href={reference}
       className={`${className} h-full relative flex items-center`}
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
@@ -18,13 +19,13 @@ const Option = ({ className, label, reference }: OptionProps) => {
         whileHover={{ backgroundColor: "#393939" }}
         className="p-2 rounded-md hover:text-white"
       >
-        <motion.a href={reference}>{label}</motion.a>
+        <span>{label}</span>
       </motion.div>
       <motion.div
         className={`hidden md:flex absolute  h-1 bottom-0
          ${onHover && "w-full bg-red-400 rounded-md delay-300"}`}
       ></motion.div>
-    </div>
+    </motion.a>
   );
 };
 

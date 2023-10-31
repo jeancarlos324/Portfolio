@@ -57,6 +57,7 @@ const App = () => {
           loaded={particlesLoaded}
           options={{
             background: { color: { value: "#202020bd" } },
+            zLayers: 1,
             fullScreen: { zIndex: 0 },
             fps_limit: 120,
             interactivity: {
@@ -132,8 +133,10 @@ const App = () => {
             <Tecnologies className="h-full container mx-auto z-10" />
           </Template>
         </div>
-        <div className="md:h-[150%] lg:snap-start w-full p-2">
-          <ShowProjects className=" container mx-auto z-10 " />
+        <div className=" lg:snap-start w-full p-2 min-h-full">
+          <Template className="h-full w-full">
+            <ShowProjects className=" container mx-auto z-10" />
+          </Template>
         </div>
         <Template className="w-full h-[80%]  sm:h-full dark:bg-secondary-color-gradiant snap-none">
           <Contact className="h-full container mx-auto z-10" />

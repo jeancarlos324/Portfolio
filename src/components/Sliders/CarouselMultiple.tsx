@@ -62,8 +62,8 @@ const CarouselMultiple = ({
       swipeable
     >
       {data.map((image) => (
-        <motion.div key={image[itemKey]} className="h-full flex flex-col justify-center items-center">
-          <img src={image[labelField]} className="h-2/5 w-2/5 p-3 animation-litle-card" />
+        <motion.div key={image[itemKey]} className="h-full flex flex-col justify-center items-center hover:scale-110 duration-300 hover:drop-shadow-normal">
+          <img src={image[labelField]} className="h-[8rem] w-[9rem] p-3 animation-litle-card " />
           <span className="text-sm">{image?.title}</span>
         </motion.div>
       ))}
