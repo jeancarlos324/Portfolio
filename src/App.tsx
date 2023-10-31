@@ -138,7 +138,7 @@ const App = () => {
         <Template className="w-full h-[80%]  sm:h-full dark:bg-secondary-color-gradiant snap-none">
           <Contact className="h-full container mx-auto z-10" />
         </Template>
-        <Footer className=" md:h-[110px] " />
+        <Footer className=" md:h-[110px] z-10" />
       </div>
     </motion.div>
   );
