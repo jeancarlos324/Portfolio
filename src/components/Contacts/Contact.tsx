@@ -4,12 +4,14 @@ import InputText from "./InputText";
 import emailjs, { send } from "@emailjs/browser";
 import HtmlTool from "../Toolkits/HtmlTool";
 import { dropIn } from "../../animations/animation";
+import { LanguajeType } from "../../types";
 
 interface ContactProps {
   className?: string;
+  language: LanguajeType;
 }
 
-const Contact = ({ className }: ContactProps) => {
+const Contact = ({ className, language }: ContactProps) => {
   const mailInfo = {
     mail: "jecar324@gmail.com",
     subject: "Contact from Portfolio",
@@ -41,9 +43,15 @@ const Contact = ({ className }: ContactProps) => {
       <div className="md:w-1/2 flex flex-col gap-3 items-center md:p-5 my-auto">
         <h2 className="text-title py-5 md:w-3/5 flex flex-col gap-5 animation-litle-card font-manrope font-bold text-center md:text-left">
           <HtmlTool tagHtml="<h2>" />
-          <span className="text-3xl font-chivo text-left">Ponte en</span>
-          <span className="font-manrope text-center">Contacto</span>
-          <span className="text-3xl font-chivo text-right">conmigo</span>
+          <span className="text-3xl font-chivo text-left">
+            {language === "ES" ? "Ponte en" : "Get in"}
+          </span>
+          <span className="font-manrope text-center">
+            {language === "ES" ? "Contacto" : "Contact"}
+          </span>
+          <span className="text-3xl font-chivo text-right">
+            {language === "ES" ? "conmigo" : "with me"}{" "}
+          </span>
           <HtmlTool tagHtml="<h2>" />
         </h2>
 
@@ -57,11 +65,15 @@ const Contact = ({ className }: ContactProps) => {
           <h3 className="text-xl font-chivo text-center md:text-left ">CV</h3>
           <p className="text-md">
             <a
-              href="/Jean_Carlos_Ticona_Gutierrez_CV.pdf"
+              href={
+                language === "ES"
+                  ? "/Jean_Carlos_Ticona_Gutierrez_CV.pdf"
+                  : "Resume.pdf"
+              }
               target={"_blank"}
               className="text-red-gradiant"
             >
-              Descargar mi CV
+              {language === "ES" ? "Descargar mi CV" : "Download my Resume"}
             </a>
           </p>
         </div>
@@ -78,7 +90,9 @@ const Contact = ({ className }: ContactProps) => {
               required
               type="text"
               name="from_name"
-              placeholder="Nombre"
+              placeholder=
+              {language === "ES" ? "Nombre" : "Name or Organization"}
+
             />
             <InputText
               // label="Email:"
@@ -94,7 +108,7 @@ const Contact = ({ className }: ContactProps) => {
                p-3 rounded-md caret-red-500"
               cols={20}
               rows={5}
-              placeholder="Mensaje"
+              placeholder={language === "ES" ? "Mensaje" : "Message"}
             ></textarea>
             <motion.button
               type="submit"
@@ -102,7 +116,7 @@ const Contact = ({ className }: ContactProps) => {
               whileHover={{ scale: 1.05 }}
               className="bg-red-gradiant px-5 rounded-md font-manrope h-[50px] w-1/2"
             >
-              Enviar
+              {language === "ES" ? "Enviar" : "Send"}
             </motion.button>
           </form>
         </div>
@@ -118,7 +132,7 @@ const Contact = ({ className }: ContactProps) => {
             animate="visible"
             exit="exit"
           >
-            Mensaje Enviado
+            {language === "ES" ? "Mensaje Enviado" : "Sending mail"}
           </motion.div>
         </div>
       )}

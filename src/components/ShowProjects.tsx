@@ -7,19 +7,24 @@ import CardLitleProject from "./Cards/CardLitleProject";
 import CardProject, { dataProp } from "./Cards/CardProject";
 import HtmlTool from "./Toolkits/HtmlTool";
 import Template from "./Templates/Template";
+import { LanguajeType } from "../types";
 
 interface ShowProjectsProps {
   className?: string;
+  language: LanguajeType;
 }
 
 const items = proyects;
-const ShowProjects = ({ className }: ShowProjectsProps) => {
+const ShowProjects = ({ className, language }: ShowProjectsProps) => {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [proyect, setProyect] = useState<dataProp | null>(null);
   const toggleSelect = (item: dataProp) => {
     setSelectedId(item.id.toString());
     setProyect(item);
   };
+
+  const handdleNavigate = () => {};
+
   return (
     <section
       className={`${className} flex flex-col items-center justify-center pt-5`}
@@ -27,37 +32,27 @@ const ShowProjects = ({ className }: ShowProjectsProps) => {
     >
       <h2 className=" text-subtitle font-chivo text-center font-bold py-5">
         <HtmlTool tagHtml="<h2>" />
-        Proyectos
+        {language == "ES" ? "Proyectos" : "Projects"}
         <HtmlTool tagHtml="</h2>" />
       </h2>
-      <section className="flex flex-wrap p-2 w-full gap-5 justify-center">
-        {works.map((item) => (
-          <CardLitleProject
-            data={item}
-            key={item.id}
-            // layoutId={item.id.toString()}
-            onClick={() => toggleSelect(item)}
-            className=""
-          />
-        ))}
-      </section>
+      {/* 
       <h2 className=" text-2xl font-chivo text-center font-bold sm:py-5">
         <HtmlTool tagHtml="<h2>" />
         Proyectos personales
         <HtmlTool tagHtml="</h2>" />
-      </h2>
+      </h2> */}
       <section className="flex flex-wrap p-2 w-full gap-5 justify-center">
         {items.map((item) => (
           <CardLitleProject
             data={item}
             key={item.id}
             // layoutId={item.id.toString()}
-            onClick={() => toggleSelect(item)}
+            onClick={handdleNavigate}
             className=" "
           />
         ))}
       </section>
-      {selectedId && (
+      {/* {selectedId && (
         <motion.div
           className="absolute flex justify-center items-center left-0 top-0 h-screen w-screen bg-[#00000066] z-10 overflow-hidden"
           onClick={() => setSelectedId(null)}
@@ -76,7 +71,7 @@ const ShowProjects = ({ className }: ShowProjectsProps) => {
             />
           </AnimatePresence>
         </motion.div>
-      )}
+      )} */}
     </section>
   );
 };

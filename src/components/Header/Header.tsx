@@ -2,21 +2,31 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "../../assets/logo_dark.svg";
 import Option from "./Option";
+import { LanguajeType } from "../../types";
 
 interface HeaderProps {
   className?: string;
+  language: LanguajeType;
 }
 
 const menu = [
-  { id: 1, name: "Home", ref: "#home" },
+  { id: 1, name: "Inicio", ref: "#home" },
   { id: 2, name: "Sobre Mí", ref: "#aboutme" },
   { id: 3, name: "Habilidades", ref: "#skills" },
   { id: 4, name: "Tecnologías", ref: "#tecnologies" },
   { id: 5, name: "Proyectos", ref: "#projects" },
 ];
-const Header = ({ className }: HeaderProps) => {
+
+const menuEN = [
+  { id: 1, name: "Home", ref: "#home" },
+  { id: 2, name: "About me", ref: "#aboutme" },
+  { id: 3, name: "Skills", ref: "#skills" },
+  { id: 4, name: "Technologies", ref: "#tecnologies" },
+  { id: 5, name: "Projects", ref: "#projects" },
+];
+const Header = ({ className, language }: HeaderProps) => {
   const [isActive, setIsActive] = useState(false);
-  
+
   return (
     <motion.header
       className={`sticky top-0 flex flex-col  w-full  ${className} justify-between items-center md:px-5  text-menu z-20`}
@@ -39,23 +49,32 @@ const Header = ({ className }: HeaderProps) => {
         </motion.div>
         <div className="hidden md:flex items-center gap-10 h-full">
           <motion.div className="flex h-full w-full justify-center gap-4 font-victor ">
-            {menu.map((option) => (
-              <Option
-                className=" relative "
-                key={option.id}
-                label={option.name}
-                reference={option.ref}
-              />
-            ))}
+            {language === "ES"
+              ? menu.map((option) => (
+                  <Option
+                    className=" relative "
+                    key={option.id}
+                    label={option.name}
+                    reference={option.ref}
+                  />
+                ))
+              : menuEN.map((option) => (
+                  <Option
+                    className=" relative "
+                    key={option.id}
+                    label={option.name}
+                    reference={option.ref}
+                  />
+                ))}
           </motion.div>
-          <motion.button
-            type="button"
+          <motion.a
+            href="#contact"
+            className="bg-red-gradiant h-2/3 px-6 pt-2 rounded-md font-manrope font-bold"
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.1 }}
-            className="bg-red-gradiant h-2/3 px-5 rounded-md font-manrope font-bold"
           >
-            <a href="#contact">Contactame</a>
-          </motion.button>
+            {language === "ES" ? "Contactame" : "Contact_me"}
+          </motion.a>
         </div>
         <motion.button
           className="block md:hidden pr-5"
@@ -86,14 +105,23 @@ const Header = ({ className }: HeaderProps) => {
             exit={{ opacity: 0 }}
             className=" h-1/5 w-full justify-center md:flex-row md:gap-10 font-victor "
           >
-            {menu.map((option) => (
-              <Option
-                className=" py-2 pl-2 w-full hover:bg-red-gradiant"
-                key={option.id}
-                label={option.name}
-                reference={option.ref}
-              />
-            ))}
+            {language === "ES"
+              ? menu.map((option) => (
+                  <Option
+                    className=" py-2 pl-2 w-full hover:bg-red-gradiant"
+                    key={option.id}
+                    label={option.name}
+                    reference={option.ref}
+                  />
+                ))
+              : menuEN.map((option) => (
+                  <Option
+                    className=" py-2 pl-2 w-full hover:bg-red-gradiant"
+                    key={option.id}
+                    label={option.name}
+                    reference={option.ref}
+                  />
+                ))}
             <motion.button
               animate={{
                 opacity: 1,
@@ -105,7 +133,7 @@ const Header = ({ className }: HeaderProps) => {
               whileTap={{ scale: 0.95 }}
               className="h-full px-5 py-2 flex justify-start items-center bg-red-gradiant rounded-md"
             >
-              Contactame
+              {language === "ES" ? "Contactame" : "Contact me"}
             </motion.button>
           </motion.div>
         </motion.div>

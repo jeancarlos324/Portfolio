@@ -12,6 +12,9 @@ import Ecommerce2 from "../assets/proyects/ecommerce2.png";
 import Ecommerce3 from "../assets/proyects/ecommerce3.png";
 import Ecommerce4 from "../assets/proyects/ecommerce-logo.svg";
 import Ecommerce5 from "../assets/proyects/ecommerce4.png";
+import Quoutes from "../assets/proyects/quotes.png";
+import MakeBlur from "../assets/proyects/makeblur.png";
+import Portfolio from "../assets/proyects/portfolio.png";
 export const proyects = [
   // {
   //   id: 1,
@@ -56,6 +59,7 @@ export const proyects = [
   //   ],
   //   duration: "03 a 05 horas aprox",
   // },
+
   {
     id: 2,
     title: "Rick and Morty",
@@ -80,9 +84,9 @@ export const proyects = [
       },
       {
         id: 2,
-        title: "JavaScript",
+        title: "TypeScript",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "https://lineadecodigo.com/wp-content/uploads/2017/08/typescript.png",
       },
       {
         id: 3,
@@ -123,9 +127,9 @@ export const proyects = [
       },
       {
         id: 2,
-        title: "JavaScript",
+        title: "TypeScript",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "https://lineadecodigo.com/wp-content/uploads/2017/08/typescript.png",
       },
       {
         id: 5,
@@ -214,5 +218,131 @@ export const proyects = [
       },
     ],
     duration: "12 a 14 horas aprox",
+  },
+  {
+    id: 5,
+    title: "Quotes Random",
+    subtitle: "Notas y Frases Celebres Aleatorias",
+    urlSite: "https://quotesandcolorsjeanticona.netlify.app/",
+    urlRepo: "https://github.com/jeancarlos324/quotesandcolors",
+    description:
+      "Consumiendo una API de la conocida serie de 'Rick and Morty' y construyendo un interfaz de consulta de los universos de la serie. Mostrando a cada uno de los habitantes pertenecientes a sus respectivos universos. Desarrollado con JAVASCRIPT, usando REACTJS y estilizado con TAILWIND",
+    images: [
+      { id: 1, image: Quoutes },
+      { id: 2, image: Quoutes },
+      { id: 3, image: Quoutes },
+      { id: 4, image: Quoutes },
+    ],
+    technologies: [
+      {
+        id: 1,
+        title: "React JS",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+      },
+      {
+        id: 2,
+        title: "JavaScript",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      },
+      {
+        id: 3,
+        title: "Taildwind",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png",
+      },
+      {
+        id: 4,
+        title: "Framer Motion",
+        image:
+          "https://seeklogo.com/images/F/framer-motion-logo-DA1E33CAA1-seeklogo.com.png",
+      },
+    ],
+    duration: "03 a 05 horas aproximadamente",
+  },
+  {
+    id: 6,
+    title: "Glasmorph CSS generate",
+    subtitle: "Generador de Estilos CSS",
+    urlSite: "https://jeanticonaglasmorfismo.netlify.app/",
+    urlRepo: "https://github.com/jeancarlos324/glasmorfismo",
+    description:
+      "Consumiendo una API de la conocida serie de 'Rick and Morty' y construyendo un interfaz de consulta de los universos de la serie. Mostrando a cada uno de los habitantes pertenecientes a sus respectivos universos. Desarrollado con JAVASCRIPT, usando REACTJS y estilizado con TAILWIND",
+    images: [
+      { id: 1, image: MakeBlur },
+      { id: 2, image: MakeBlur },
+      { id: 3, image: MakeBlur },
+      { id: 4, image: MakeBlur },
+    ],
+    technologies: [
+      {
+        id: 1,
+        title: "React JS",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+      },
+      {
+        id: 2,
+        title: "JavaScript",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      },
+      {
+        id: 3,
+        title: "Taildwind",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png",
+      },
+      {
+        id: 4,
+        title: "Framer Motion",
+        image:
+          "https://seeklogo.com/images/F/framer-motion-logo-DA1E33CAA1-seeklogo.com.png",
+      },
+    ],
+    duration: "03 a 05 horas aproximadamente",
+  },
+  {
+    id: 7,
+    title: "Portfolio",
+    subtitle: "Portafolio con mi descripción",
+    urlSite: "https://jeanticonadev.netlify.app/",
+    urlRepo: "https://github.com/jeancarlos324/Portfolio",
+    description:
+      "Consumiendo una API de la conocida serie de 'Rick and Morty' y construyendo un interfaz de consulta de los universos de la serie. Mostrando a cada uno de los habitantes pertenecientes a sus respectivos universos. Desarrollado con JAVASCRIPT, usando REACTJS y estilizado con TAILWIND",
+    images: [
+      { id: 1, image: Portfolio },
+      { id: 2, image: Portfolio },
+      { id: 3, image: Portfolio },
+      { id: 4, image: Portfolio },
+    ],
+    technologies: [
+      {
+        id: 1,
+        title: "React JS",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+      },
+      {
+        id: 2,
+        title: "TypeScript",
+        image:
+          "https://lineadecodigo.com/wp-content/uploads/2017/08/typescript.png",
+      },
+      {
+        id: 3,
+        title: "Taildwind",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png",
+      },
+      {
+        id: 4,
+        title: "Framer Motion",
+        image:
+          "https://seeklogo.com/images/F/framer-motion-logo-DA1E33CAA1-seeklogo.com.png",
+      },
+    ],
+    duration: "03 a 05 horas aproximadamente",
   },
 ];

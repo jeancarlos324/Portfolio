@@ -4,10 +4,12 @@ import CarouselMultiple from "../Sliders/CarouselMultiple";
 import HtmlTool from "../Toolkits/HtmlTool";
 import { motion } from "framer-motion";
 import { backEnd, frontEnd } from "../../data/tecnologies";
+import { LanguajeType } from "../../types";
 interface TecnologiesProps {
   className?: string;
+  language: LanguajeType;
 }
-const Tecnologies = ({ className }: TecnologiesProps) => {
+const Tecnologies = ({ className, language }: TecnologiesProps) => {
   const [options, setOptions] = useState("Front");
 
   return (
@@ -17,7 +19,8 @@ const Tecnologies = ({ className }: TecnologiesProps) => {
     >
       <h2 className="text-subtitle font-chivo text-center font-bold sm:pb-5">
         <HtmlTool tagHtml="<h2>" />
-        Tecnologías
+
+        {language === "ES" ? "Tecnologías" : "Technologies"}
         <HtmlTool tagHtml="</h2>" />
       </h2>
       <motion.button
@@ -48,10 +51,10 @@ const Tecnologies = ({ className }: TecnologiesProps) => {
         </motion.div>
       </div>
       <motion.button
-         className="p-2 rounded-md"
-         animate={{
-           backgroundColor: options === "Front" ? "#f92847" : "#00000000",
-         }}
+        className="p-2 rounded-md"
+        animate={{
+          backgroundColor: options === "Front" ? "#f92847" : "#00000000",
+        }}
         onClick={() => setOptions("Back")}
       >
         Back-End

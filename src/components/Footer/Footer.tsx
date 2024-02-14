@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import React from "react";
+import { LanguajeType } from "../../types";
 interface FooterProps {
   className?: string;
+  language: LanguajeType;
 }
 const Footer = ({ className }: FooterProps) => {
   const socialNetwork = [

@@ -38,12 +38,28 @@ const CardLitleProject = ({
                 key={technologic.id}
                 className="min-h-[35px] min-w-[35px] max-h-[45px] max-w-[45px]  "
               >
-                <img src={technologic.image} className="h-full w-full hover:scale-110 duration-300 hover:drop-shadow-normal" />
+                <img
+                  src={technologic.image}
+                  className="h-full w-full hover:scale-110 duration-300 hover:drop-shadow-normal"
+                />
               </div>
             ))}
           </div>
-          <div className="cursor-pointer text-sm ">
-            {`> Click para ver más <`}
+          <div className="cursor-pointer text-sm flex  w-4/5 align-middle justify-between ">
+            <a
+              href={data.urlSite}
+              className="bg-red-500  p-2"
+              target={"_blank"}
+            >
+              Show Project
+            </a>
+            <a
+              href={data.urlRepo}
+              className="bg-red-500  p-2"
+              target={"_blank"}
+            >
+              Show Repository
+            </a>
           </div>
         </div>
       </motion.div>
