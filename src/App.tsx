@@ -22,18 +22,22 @@ const App = () => {
     if (lan) setLanguage(lan);
   }, []);
 
-  const [language, setLanguage] = useState<LanguajeType>("EN");
+  const [language, setLanguage] = useState<LanguajeType>("ES");
   const [darkToggle, setDarkToggle] = useState(true);
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
     await loadSlim(engine);
   }, []);
   const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {
-      console.log(container);
-    },
+    async (container: Container | undefined) => {},
     []
   );
+
+  const handdleChangeLanguaje = () => {
+    if (language === "ES") setLanguage("EN");
+    if (language === "EN") setLanguage("ES");
+  };
+
+  console.log(language);
   return (
     <motion.div
       // animate={{
@@ -121,34 +125,56 @@ const App = () => {
         >
           {darkToggle ? "ligth" : "dark"}
         </button> */}
-        <Header className="dark:bg-primary-color bg-gray-light-gradiant z-10 dark:text-gray-light-gradiant" language={language} />
+        <Header
+          onClick={handdleChangeLanguaje}
+          className="dark:bg-primary-color bg-gray-light-gradiant z-10 dark:text-gray-light-gradiant"
+          language={language}
+        />
         <div className="h-[105%] sm:h-[130%] md:h-full w-full md:snap-start ">
           <Template className="h-full ">
-            <Home  className="h-full container mx-auto z-10" language={language} />
+            <Home
+              className="h-full container mx-auto z-10"
+              language={language}
+            />
           </Template>
         </div>
         <div className="h-[100%] sm:h-[130%] md:h-full w-full dark:bg-secondary-color-gradiant snap-start">
           <Template className="h-full">
-            <About className="h-full container mx-auto z-10" language={language}/>
+            <About
+              className="h-full container mx-auto z-10"
+              language={language}
+            />
           </Template>
         </div>
         <Template className="h-full snap-center">
-          <Skills className="h-full container mx-auto z-10" language={language}/>
+          <Skills
+            className="h-full container mx-auto z-10"
+            language={language}
+          />
         </Template>
         <div className="h-full w-full  dark:bg-secondary-color-gradiant snap-center">
           <Template className="h-full w-full">
-            <Tecnologies className="h-full container mx-auto z-10" language={language}/>
+            <Tecnologies
+              className="h-full container mx-auto z-10"
+              language={language}
+            />
           </Template>
         </div>
         <div className=" lg:snap-start w-full p-2 min-h-full">
           <Template className="h-full w-full">
-            <ShowProjects className=" container mx-auto z-10"  language={language}/>
+            <ShowProjects
+              className=" container mx-auto z-10"
+              language={language}
+            />
           </Template>
         </div>
         <Template className="w-full h-[80%]  sm:h-full dark:bg-secondary-color-gradiant snap-none">
-          <Contact className="h-full container mx-auto z-10" language={language} />
+          <Contact
+            className="h-full container mx-auto z-10"
+            language={language}
+          />
         </Template>
-        <Footer className=" md:h-[110px] z-10"  language={language}/>
+        <Footer className=" md:h-[110px] z-10" language={language} />
       </div>
     </motion.div>
   );

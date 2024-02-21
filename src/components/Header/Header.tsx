@@ -7,6 +7,7 @@ import { LanguajeType } from "../../types";
 interface HeaderProps {
   className?: string;
   language: LanguajeType;
+  onClick: () => void;
 }
 
 const menu = [
@@ -24,7 +25,7 @@ const menuEN = [
   { id: 4, name: "Technologies", ref: "#tecnologies" },
   { id: 5, name: "Projects", ref: "#projects" },
 ];
-const Header = ({ className, language }: HeaderProps) => {
+const Header = ({ className, language, onClick }: HeaderProps) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -67,6 +68,21 @@ const Header = ({ className, language }: HeaderProps) => {
                   />
                 ))}
           </motion.div>
+          <button
+            className="bg-red-gradiant p-1 rounded-md text-sm font-bold flex gap-1 w-20"
+            onClick={onClick}
+          >
+            {language === "ES" ? "EN" : "ES"}
+            <img
+              className="h-6 w-full"
+              src={
+                language === "ES"
+                  ? "https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/512px/1f1fa-1f1f8.png"
+                  : "https://images.emojiterra.com/google/noto-emoji/unicode-15.1/color/512px/1f1ea-1f1f8.png"
+              }
+              alt="flag"
+            />
+          </button>
           <motion.a
             href="#contact"
             className="bg-red-gradiant h-2/3 px-6 pt-2 rounded-md font-manrope font-bold"
@@ -122,6 +138,7 @@ const Header = ({ className, language }: HeaderProps) => {
                     reference={option.ref}
                   />
                 ))}
+
             <motion.button
               animate={{
                 opacity: 1,
